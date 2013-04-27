@@ -11,7 +11,6 @@ import net.umc.ludumdare.exceptions.ResourceDoesNotExistException;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.Sound;
-import org.newdawn.slick.tiled.TiledMap;
 
 /*
  * Author:	Chris McCullough
@@ -56,10 +55,6 @@ public class ResourceManager {
 			return true;
 		}
 		return false;
-	}
-	
-	public static TiledMap getMap(String res) {
-		return (TiledMap)getResource(res, ResourceTypes.MAP);
 	}
 	
 	public static Image getImage(String res) {
@@ -108,16 +103,6 @@ public class ResourceManager {
 				Sound sound = new Sound(DataService.getResourcePath(res, type));
 				if (sound != null && !resources.containsKey(res)) {
 					resources.put(res, sound);
-				}
-			} catch (SlickException e) {
-				e.printStackTrace();
-			}		
-		}
-		else if (type == ResourceTypes.MAP) {
-			try {
-				TiledMap map = new TiledMap(DataService.getResourcePath(res, type));
-				if (map != null && !resources.containsKey(res)) {
-					resources.put(res, map);
 				}
 			} catch (SlickException e) {
 				e.printStackTrace();
