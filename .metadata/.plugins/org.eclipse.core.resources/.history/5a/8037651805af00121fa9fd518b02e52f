@@ -61,16 +61,7 @@ public class OptionsState extends BasicGameState{
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
     	g.setColor(Color.white);
     	g.drawString("Resolution", 20, 20);
-    	if (resSelector == 0) {
-    		g.setColor(Color.yellow);
-    	}
-    	g.drawString("800 x 600", 70, 20);
-    	g.setColor(Color.white);
-    	if (resSelector == 0) {
-    		g.setColor(Color.yellow);
-    	}
-    	g.drawString("800 x 600", 70, 20);
-    	g.setColor(Color.white);
+    	
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
