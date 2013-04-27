@@ -37,6 +37,7 @@ public class GamePlayState extends BasicGameState{
     private int jumpTimer = 0;
     private int fallTimer = 0;
     private int jDelayTimer = jDelayTimerMax;
+    private float jScale;
     private int cloudY;
 
     
@@ -77,12 +78,12 @@ public class GamePlayState extends BasicGameState{
     	g.translate((screenWidth - 448) / 2, screenHeight - level.getMainChar().getY() - 128);
     	level.render(gc, g);
     	if (jumping) {
-    		level.getMainChar().render(gc, g, 1 + ((float)jumpTimer/jumpTimerMax));
-    		float j = 1 + ((float)jumpTimer/jumpTimerMax);
-    		System.out.println(j);
+    		jScale = 1 + ((float)jumpTimer/jumpTimerMax);
+    		level.getMainChar().render(gc, g, jScale);
+    		System.out.println(jScale);
     	}
     	else if (falling)
-    		level.getMainChar().render(gc, g, 2 - ((float)fallTimer/fallTimerMax));
+    		level.getMainChar().render(gc, g, jScale - ((float)fallTimer/fallTimerMax)*(jScale-1));
     	else
     		level.getMainChar().render(gc, g);
     	g.resetTransform();
