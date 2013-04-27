@@ -18,7 +18,6 @@ public class Level {
 	private float x, y;
 	private Sprite mainChar;
 	private ArrayList<Sprite> enemyList;
-	private ArrayList<CloudPlatform> platforms;
 	private String mapID, charID;
 	private ArrayList<String> enemyIDs;
 	
@@ -27,13 +26,11 @@ public class Level {
 		this.mapID = mapID;
 		this.charID = charID;
 		this.enemyIDs = enemyIDs;
-		platforms = new ArrayList<CloudPlatform>();
 	}
 	
 	public Level(String mapID, String charID){
 		this.mapID = mapID;
 		this.charID = charID;
-		platforms = new ArrayList<CloudPlatform>();
 	}
 	
 	public void init(){
