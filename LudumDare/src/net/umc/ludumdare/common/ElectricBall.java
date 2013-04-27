@@ -27,16 +27,17 @@ public class ElectricBall extends Sprite{
 	
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) {
 		flipTimer+=delta;
+		if (flipTimer>=flipTimerMax) {
+			flipped = !flipped;
+			flipTimer = 0;
+		}
 	}
 	
 	public void render(GameContainer gc, Graphics g){
-		if (flipTimer>=flipTimerMax) {
-			flipTimer = 0;
-			if(flipped)
-				renderFlipped(gc, g, 1, false, false);
-			else
-				renderFlipped(gc, g, 1, true, false);
-		}
+		if(flipped)
+			renderFlipped(gc, g, 1, false, false);
+		else
+			renderFlipped(gc, g, 1, true, false);
 	}
 	
 }

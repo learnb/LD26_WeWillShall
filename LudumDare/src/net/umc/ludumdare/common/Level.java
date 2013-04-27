@@ -42,7 +42,7 @@ public class Level {
 		mainChar = new Sprite(ResourceManager.getImage(charID));
 		mainChar.setX(192);
 		mainChar.setY(levelMap.getHeight() * levelMap.getTileHeight() - 64);
-		mainChar.setVelY(-3f);
+		mainChar.setVelY(-5f);
 		enemyList = new ArrayList<Sprite>();
 		if (enemyIDs != null) {
 			for(String id : enemyIDs){
