@@ -60,7 +60,7 @@
       "qualifier": ""
     },
     "jarFileFingerprint": "dcb1c4dfb10f3e37cc950dd051668c0ae50134e3",
-    "jarFileModificationDate": "2013-04-22T21:31:59.658-04:00",
+    "jarFileModificationDate": "2013-04-27T12:08:15-04:00",
     "location": "C:\\Users\\ccm82_000\\Documents\\GitHub\\LD26_WeWillShall\\LudumDare\\libs\\slick.jar",
     "javaRuntime": false
   },
@@ -86,7 +86,7 @@
       "qualifier": ""
     },
     "jarFileFingerprint": "2d5a40f2a25f8b4ec1ea35f3e5ca79119ed5d027",
-    "jarFileModificationDate": "2013-04-22T21:31:59.375-04:00",
+    "jarFileModificationDate": "2013-04-27T12:08:14.898-04:00",
     "location": "C:\\Users\\ccm82_000\\Documents\\GitHub\\LD26_WeWillShall\\LudumDare\\libs\\jinput.jar",
     "javaRuntime": false
   },
@@ -112,7 +112,7 @@
       "qualifier": ""
     },
     "jarFileFingerprint": "cea9f7f8e6bcb580d953a8651fb8391640de0f85",
-    "jarFileModificationDate": "2013-04-22T21:31:59.738-04:00",
+    "jarFileModificationDate": "2013-04-27T12:08:15.020-04:00",
     "location": "C:\\Users\\ccm82_000\\Documents\\GitHub\\LD26_WeWillShall\\LudumDare\\libs\\sqlite-jdbc-3.7.2.jar",
     "javaRuntime": false
   },
@@ -203,7 +203,7 @@
       "qualifier": ""
     },
     "jarFileFingerprint": "b9acde346914aa47ff87ae0bbab4b29fe2ec13fd",
-    "jarFileModificationDate": "2013-04-22T21:31:59.519-04:00",
+    "jarFileModificationDate": "2013-04-27T12:08:14.987-04:00",
     "location": "C:\\Users\\ccm82_000\\Documents\\GitHub\\LD26_WeWillShall\\LudumDare\\libs\\lwjgl.jar",
     "javaRuntime": false
   },
@@ -230,7 +230,7 @@
     },
     "jarFileFingerprint": "dcb1c4dfb10f3e37cc950dd051668c0ae50134e3",
     "jarFileModificationDate": "2013-04-22T21:31:59.658-04:00",
-    "location": "C:\\projects\\LudumDare\\LudumDare\\libs\\slick.jar",
+    "location": "C:\\projects\\LudumDare\\LudumDareWarmup\\libs\\slick.jar",
     "javaRuntime": false
   },
   {
@@ -243,7 +243,7 @@
     },
     "jarFileFingerprint": "dcb1c4dfb10f3e37cc950dd051668c0ae50134e3",
     "jarFileModificationDate": "2013-04-22T21:31:59.658-04:00",
-    "location": "C:\\projects\\LudumDare\\LudumDareWarmup\\libs\\slick.jar",
+    "location": "C:\\projects\\LudumDare\\LudumDare\\libs\\slick.jar",
     "javaRuntime": false
   },
   {

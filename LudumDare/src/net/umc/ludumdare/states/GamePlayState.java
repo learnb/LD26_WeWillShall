@@ -31,6 +31,7 @@ public class GamePlayState extends BasicGameState{
     private int jumpTimer = 0;
     private int fallTimer = 0;
     private int jDelayTimer = jDelayTimerMax;
+    private int cloudY;
 
     
     public GamePlayState( int stateID ) 
@@ -47,16 +48,23 @@ public class GamePlayState extends BasicGameState{
     	screenHeight = ResourceManager.getGlobalInt("SCREEN_HEIGHT");
     	level = new Level("redmap", "GUY");
     	level.init();
+    	cloudY = -2048;
     	pause = false;
     }
  
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
+    	//draw some background
+    	g.drawImage(ResourceManager.getImage("cloudbg"), 0, cloudY - 2048);
+    	g.drawImage(ResourceManager.getImage("cloudbg"), 0, cloudY);
+    	g.drawImage(ResourceManager.getImage("cloudbg"), 0, cloudY + 2048);
     	g.translate((screenWidth - 448) / 2, screenHeight - level.getMainChar().getY() - 128);
     	level.render(gc, g);
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
     	if (pause) return;
+    	
+    	cloudY = cloudY >= 2048 ? -2048 : cloudY + 2;
     	
     	level.update(gc, sbg, delta);
     	input = gc.getInput();
