@@ -59,11 +59,8 @@ public class Level {
 	public void update(GameContainer gc, StateBasedGame sbg, int delta){
 		mainChar.update(gc, sbg, delta);
 		for(Sprite e : enemyList){
-			if (Math.abs(e.getY() - mainChar.getY()) <= 600) {
-					e.update(gc, sbg, delta);
-					continue;
-			}
-			if (checkCollision(e, mainChar)) init();
+			e.update(gc, sbg, delta);
+			
 		}
 	}
 	
@@ -128,6 +125,6 @@ public class Level {
 		if (a.getX() + 64 < b.getX()) return false;
 		if (a.getX() > b.getX() + 64) return false;
 		if (a.getY() + 64 < b.getY()) return false;
-		return !(a.getY() > b.getY() + 64);
+		return (a.getY() > b.getY() + 64);
 	}
 }

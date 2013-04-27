@@ -128,6 +128,6 @@ public class Level {
 		if (a.getX() + 64 < b.getX()) return false;
 		if (a.getX() > b.getX() + 64) return false;
 		if (a.getY() + 64 < b.getY()) return false;
-		return !(a.getY() > b.getY() + 64);
+		return (a.getY() > b.getY() + 64);
 	}
 }

@@ -116,8 +116,8 @@ public class ResourceManager {
 		}
 		else if (type == ResourceTypes.MUSIC) {
 			try {
-				Music music = new Music(DataService.getResourcePath(res, type));
-				if (music != null && !resources.containsKey(res)) {
+				Music sound = new Music(DataService.getResourcePath(res, type));
+				if (sound != null && !resources.containsKey(res)) {
 					resources.put(res, music);
 				}
 			} catch (SlickException e) {

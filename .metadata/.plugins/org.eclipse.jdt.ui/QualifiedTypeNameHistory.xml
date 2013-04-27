@@ -19,4 +19,5 @@
 <fullyQualifiedTypeName name="org.newdawn.slick.Input"/>
 <fullyQualifiedTypeName name="net.umc.ludumdare.MainGame"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Music"/>
 </qualifiedTypeNameHistroy>
