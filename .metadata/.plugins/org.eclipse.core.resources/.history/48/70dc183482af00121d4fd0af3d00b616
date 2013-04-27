@@ -162,7 +162,15 @@ public class GamePlayState extends BasicGameState{
     	int panelX = (int)(mainChar.getX() + 32) / 64;
     	int panelY = (int)(mainChar.getY() + 48) / 64;
     	
-    	if ((!jumping && !falling) && !level.getPlatform()[panelX][panelY] && !onPlatform()) {
+    	boolean onPlatform = false;
+    	for(CloudPlatform platform: level.getPlatforms()) {
+    		if (Level.checkHeroCollision(mainChar, platform)) {
+    			onPlatform = true;
+    			break;
+    		}
+    	}
+    	
+    	if (!onPlatform && (!jumping && !falling) && !level.getPlatform()[panelX][panelY]) {
     		//pause = true;
     		level.init();
     	}
@@ -170,13 +178,4 @@ public class GamePlayState extends BasicGameState{
     
     public static boolean getJumping() { return jumping; }
     public static boolean getFalling() { return falling; }
-    
-    private boolean onPlatform() {
-    	for(CloudPlatform platform: level.getPlatforms()) {
-    		if (Level.checkHeroCollision(mainChar, platform)) {
-    			return true;
-    		}
-    	}
-    	return false;
-    }
 }

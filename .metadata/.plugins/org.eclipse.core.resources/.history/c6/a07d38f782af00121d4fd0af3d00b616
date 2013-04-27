@@ -71,18 +71,12 @@ public class Level {
 			}		
 			if (!GamePlayState.getFalling() && !GamePlayState.getJumping() && checkHeroCollision(mainChar, e)) init();
 		}
-		for(CloudPlatform p: platforms) {
-			p.update(gc, sbg, delta);
-		}
 	}
 	
 	public void render(GameContainer gc, Graphics g){
 		levelMap.render(0, 0);
 		for(Sprite e : enemyList){
 			e.render(gc, g);
-		}
-		for(CloudPlatform p: platforms) {
-			p.render(gc, g);
 		}
 		//mainChar.render(gc, g);
 	}

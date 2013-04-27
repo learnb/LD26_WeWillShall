@@ -22,4 +22,5 @@
 <fullyQualifiedTypeName name="net.umc.ludumdare.states.GamePlayState"/>
 <fullyQualifiedTypeName name="net.umc.ludumdare.tools.ResourceManager"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Image"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.common.CloudPlatform"/>
 </qualifiedTypeNameHistroy>

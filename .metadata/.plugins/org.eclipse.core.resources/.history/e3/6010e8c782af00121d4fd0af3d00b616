@@ -21,8 +21,6 @@ public class RedLevel extends Level {
 		enemies.add(new SnowBall(0, 3000, 0, 256));
 		setEnemyList(enemies);
 		
-		CloudPlatform platform = new CloudPlatform(200, 1500, -2, 0, 0, 448, 0, 0);
-		getPlatforms().add(platform);
 	}
 
 }

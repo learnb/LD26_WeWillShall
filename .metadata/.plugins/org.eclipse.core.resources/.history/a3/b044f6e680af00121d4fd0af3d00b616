@@ -27,13 +27,13 @@ public class Level {
 		this.mapID = mapID;
 		this.charID = charID;
 		this.enemyIDs = enemyIDs;
-		setPlatforms(new ArrayList<CloudPlatform>());
+		platforms = new ArrayList<CloudPlatform>();
 	}
 	
 	public Level(String mapID, String charID){
 		this.mapID = mapID;
 		this.charID = charID;
-		setPlatforms(new ArrayList<CloudPlatform>());
+		platforms = new ArrayList<CloudPlatform>();
 	}
 	
 	public void init(){
@@ -69,10 +69,7 @@ public class Level {
 			else{
 				continue;
 			}		
-			if (!GamePlayState.getFalling() && !GamePlayState.getJumping() && checkHeroCollision(mainChar, e)) init();
-		}
-		for(CloudPlatform p: platforms) {
-			p.update(gc, sbg, delta);
+			if (!GamePlayState.getFalling() && !GamePlayState.getJumping() && checkCollision(e, mainChar)) init();
 		}
 	}
 	
@@ -80,9 +77,6 @@ public class Level {
 		levelMap.render(0, 0);
 		for(Sprite e : enemyList){
 			e.render(gc, g);
-		}
-		for(CloudPlatform p: platforms) {
-			p.render(gc, g);
 		}
 		//mainChar.render(gc, g);
 	}
@@ -136,27 +130,19 @@ public class Level {
 		this.platform = platform;
 	}
 	
-	public static boolean checkHeroCollision(Sprite mainChar, Sprite b) {
+	public boolean checkHeroCollision(Sprite mainChar, Sprite b) {
 		if (mainChar.getX() + 64 < b.getX()) return false;
 		if (mainChar.getX() > b.getX() + 64) return false;
 		if (mainChar.getY() + 64 < b.getY()) return false;
-		if (mainChar.getY() + 48 > b.getY() + 64) return false;
+		if (mainChar.getY() - 48 > b.getY() + 64) return false;
 		return true;
 	}
 	
-	public static boolean checkCollision(Sprite a, Sprite b) {
+	public boolean checkCollision(Sprite a, Sprite b) {
 		if (a.getX() + 64 < b.getX()) return false;
 		if (a.getX() > b.getX() + 64) return false;
 		if (a.getY() + 64 < b.getY()) return false;
 		if (a.getY() > b.getY() + 64) return false;
 		return true;
-	}
-
-	public ArrayList<CloudPlatform> getPlatforms() {
-		return platforms;
-	}
-
-	public void setPlatforms(ArrayList<CloudPlatform> platforms) {
-		this.platforms = platforms;
 	}
 }

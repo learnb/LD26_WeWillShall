@@ -15,14 +15,11 @@ public class CloudPlatform extends Sprite{
 		setVelX(-2);
 		leftConstraint = 0;
 		rightConstraint = 448;
-		topConstraint = 0;
-		bottomConstraint = 100;
 	}
 	
-	public CloudPlatform(float x, float y, float velX, float velY, int left, int right, int top, int bottom) {
+	public CloudPlatform(float x, float y, int left, int right, int top, int bottom) {
 		super(new Image[] { ResourceManager.getImage("cloud_platform") }, x, y, 0, 0);
-		setVelX(velX);
-		setVelY(velY);
+		setVelX(-2);
 		leftConstraint = left;
 		rightConstraint = right;
 		topConstraint = top;
