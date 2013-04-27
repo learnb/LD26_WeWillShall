@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="7" height="50" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="redtile" tilewidth="64" tileheight="64">
+  <image source="../tiles/redtile.png" width="64" height="64"/>
+  <tile id="0">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="7" height="50">
+  <data encoding="base64" compression="zlib">
+   eJy9kdkNACAMQun+S7tAD+hhk34YDQ/BANhw4ZyzYTTYN5Gmypn42tCo8qn+r/hU+ZUnlu+Nyvpxx/jsZOtxI22WmWlv5dTVY7xedaf2M+m3sw/1BgEb
+  </data>
+ </layer>
+</map>

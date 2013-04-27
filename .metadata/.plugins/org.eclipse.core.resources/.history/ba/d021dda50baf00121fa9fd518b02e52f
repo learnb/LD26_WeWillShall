@@ -1,0 +1,114 @@
+package net.umc.ludumdare.common;
+
+import java.util.ArrayList;
+
+import net.umc.ludumdare.tools.ResourceManager;
+
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.state.StateBasedGame;
+import org.newdawn.slick.tiled.TiledMap;
+
+public class Level {
+	
+	//private members
+	private TiledMap levelMap;
+	private boolean[][] platform;
+	private float x, y;
+	private Sprite mainChar;
+	private ArrayList<Sprite> enemyList;
+	private String mapID, charID;
+	private ArrayList<String> enemyIDs;
+	
+	//constructors
+	public Level(String mapID, String charID, ArrayList<String> enemyIDs){
+		this.mapID = mapID;
+		this.charID = charID;
+		this.enemyIDs = enemyIDs;
+	}
+	
+	public Level(String mapID, String charID){
+		this.mapID = mapID;
+		this.charID = charID;
+	}
+	
+	public void init(){
+		//load resources
+		levelMap = ResourceManager.getMap(mapID);
+		mainChar = new Sprite(ResourceManager.getImage(charID));
+		enemyList = new ArrayList<Sprite>();
+		if (enemyIDs != null) {
+			for(String id : enemyIDs){
+				enemyList.add(new Sprite(ResourceManager.getImage(id)));
+			}
+		}
+		//setup platform map array
+		platform = new boolean[levelMap.getWidth()][levelMap.getHeight()];
+		for(int row=0; row<levelMap.getWidth(); row++){
+			for(int col=0; col<levelMap.getHeight(); col++){
+				if(levelMap.getTileProperty(levelMap.getTileId(row, col, 0), "platform", "false").equals("true")){
+					platform[row][col] = true;
+				}
+			}
+		}
+	}
+	
+	public void update(GameContainer gc, StateBasedGame sbg, int delta){
+		mainChar.update(gc, sbg, delta);
+		for(Sprite e : enemyList){
+			e.update(gc, sbg, delta);
+		}
+	}
+	
+	public void render(GameContainer gc, Graphics g){
+		levelMap.render(0, 0);
+		mainChar.render(gc, g);
+		for(Sprite e : enemyList){
+			e.render(gc, g);
+		}
+	}
+	
+	
+	public TiledMap getLevelMap() {
+		return levelMap;
+	}
+
+	public void setLevelMap(TiledMap levelMap) {
+		this.levelMap = levelMap;
+	}
+
+	public Sprite getMainChar() {
+		return mainChar;
+	}
+
+	public void setMainChar(Sprite mainChar) {
+		this.mainChar = mainChar;
+	}
+
+	public ArrayList<Sprite> getEnemyList() {
+		return enemyList;
+	}
+
+	public void setEnemyList(ArrayList<Sprite> enemyList) {
+		this.enemyList = enemyList;
+	}
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+	
+	
+	
+}

@@ -100,6 +100,8 @@ public class Sprite {
 		if(spriteCnt>=15*images.length){
 			spriteCnt = 0;
 		}
+		x += velX;
+		y += velY;
 	}
 	
 }

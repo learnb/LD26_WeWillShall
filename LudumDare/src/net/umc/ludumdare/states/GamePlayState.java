@@ -1,6 +1,6 @@
 package net.umc.ludumdare.states;
 
-import net.umc.ludumdare.MainGame;
+import net.umc.ludumdare.common.Level;
 import net.umc.ludumdare.tools.ResourceManager;
 
 import org.newdawn.slick.GameContainer;
@@ -14,7 +14,8 @@ import org.newdawn.slick.state.StateBasedGame;
 public class GamePlayState extends BasicGameState{
 
     int stateID = 1;
-    private int screenWidth, screenHeight, menuSelector;
+    private int screenWidth, screenHeight;
+    private Level level;
     
     public GamePlayState( int stateID ) 
     {
@@ -28,32 +29,26 @@ public class GamePlayState extends BasicGameState{
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
     	screenWidth = ResourceManager.getGlobalInt("SCREEN_WIDTH");
     	screenHeight = ResourceManager.getGlobalInt("SCREEN_HEIGHT");
-    	menuSelector = 0;
+    	level = new Level("redmap", "GUY");
+    	level.init();
     }
  
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
-    	g.drawString("Play Game", (screenWidth / 2) - 40, (screenHeight / 2) - 30);
-    	g.drawString("Options", (screenWidth / 2) - 32, (screenHeight / 2));
-    	g.drawString("Exit", (screenWidth / 2) - 20, (screenHeight / 2) + 30);
-    	g.drawRect((screenWidth / 2) - 50, (screenHeight / 2) - 30 + (menuSelector * 30), 104, 20);
+    	g.translate((screenWidth - 448) / 2, screenHeight - level.getMainChar().getY() - 128);
+    	level.render(gc, g);
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
+    	level.update(gc, sbg, delta);
     	Input input = gc.getInput();
-    	if (input.isKeyPressed(Input.KEY_DOWN)) {
-    		menuSelector = menuSelector == 2 ? 0 : menuSelector + 1;
+    	if (input.isKeyDown(Input.KEY_LEFT)) {
+    		if (level.getMainChar().getX() - 4 >= 0) {
+    			level.getMainChar().setX(level.getMainChar().getX() - 4);
+    		}
     	}
-    	else if (input.isKeyPressed(Input.KEY_UP)) {
-    		menuSelector = menuSelector == 0 ? 2 : menuSelector - 1;
-    	}
-    	else if (input.isKeyPressed(Input.KEY_ENTER)) {
-    		switch (menuSelector) {
-    			case 0:
-	    		case 1:
-	    			sbg.enterState(MainGame.OPTIONS);
-	    			break;
-	    		case 2:
-	    			gc.exit();
+    	else if (input.isKeyDown(Input.KEY_RIGHT)) {
+    		if (level.getMainChar().getX() + 64 + 4 <= 448) {
+    			level.getMainChar().setX(level.getMainChar().getX() + 4);
     		}
     	}
     }

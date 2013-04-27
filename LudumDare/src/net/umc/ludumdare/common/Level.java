@@ -36,11 +36,15 @@ public class Level {
 		//load resources
 		levelMap = ResourceManager.getMap(mapID);
 		mainChar = new Sprite(ResourceManager.getImage(charID));
+		mainChar.setX(192);
+		mainChar.setY(levelMap.getHeight() * levelMap.getTileHeight() - 64);
+		mainChar.setVelY(-3f);
 		enemyList = new ArrayList<Sprite>();
-		for(String id : enemyIDs){
-			enemyList.add(new Sprite(ResourceManager.getImage(id)));
+		if (enemyIDs != null) {
+			for(String id : enemyIDs){
+				enemyList.add(new Sprite(ResourceManager.getImage(id)));
+			}
 		}
-		
 		//setup platform map array
 		platform = new boolean[levelMap.getWidth()][levelMap.getHeight()];
 		for(int row=0; row<levelMap.getWidth(); row++){
@@ -107,7 +111,5 @@ public class Level {
 	public void setY(int y) {
 		this.y = y;
 	}
-	
-	
 	
 }

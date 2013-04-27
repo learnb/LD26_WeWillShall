@@ -49,6 +49,8 @@ public class MainMenuState extends BasicGameState{
     	else if (input.isKeyPressed(Input.KEY_ENTER)) {
     		switch (menuSelector) {
     			case 0:
+    				sbg.enterState(MainGame.GAMEPLAYSTATE);
+    				break;
 	    		case 1:
 	    			sbg.enterState(MainGame.OPTIONS);
 	    			break;

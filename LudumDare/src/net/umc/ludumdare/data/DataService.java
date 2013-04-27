@@ -47,6 +47,9 @@ public class DataService {
 		else if (type == ResourceTypes.SOUND) {
 			sqlStatement = String.format(SQLStatements.GET_SOUND, resourceId);
 		}
+		else if (type == ResourceTypes.MAP) {
+			sqlStatement = String.format(SQLStatements.GET_MAP, resourceId);
+		}
 		
 	    try {
 	    	Statement statement = connection.createStatement();

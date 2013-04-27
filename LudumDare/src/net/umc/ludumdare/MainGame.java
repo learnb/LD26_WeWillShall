@@ -1,6 +1,8 @@
 package net.umc.ludumdare;
 
+import net.umc.ludumdare.states.GamePlayState;
 import net.umc.ludumdare.states.MainMenuState;
+import net.umc.ludumdare.states.OptionsState;
 import net.umc.ludumdare.states.SplashScreenState;
 import net.umc.ludumdare.tools.ResourceManager;
 
@@ -37,6 +39,7 @@ public class MainGame extends StateBasedGame {
     public void initStatesList(GameContainer gameContainer) throws SlickException {
     	this.addState(new SplashScreenState(SPLASHSCREENSTATE));
     	this.addState(new MainMenuState(MAINMENUSTATE));
-    	this.addState(new MainMenuState(OPTIONS));
+    	this.addState(new OptionsState(OPTIONS));
+    	this.addState(new GamePlayState(GAMEPLAYSTATE));
     }
 }
