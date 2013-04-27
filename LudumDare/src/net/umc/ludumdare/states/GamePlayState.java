@@ -21,6 +21,7 @@ public class GamePlayState extends BasicGameState{
 	//game variables
     int stateID = 1;
     private int screenWidth, screenHeight;
+    private ArrayList<Level> levels;
     private Level level;
     private boolean pause;
     private Input input;
@@ -31,7 +32,7 @@ public class GamePlayState extends BasicGameState{
     private static boolean falling = false;	//descending
     private int jumpTimerMax = 400;
     private int fallTimerMax = 400;
-    private int jDelayTimerMax = 500;
+    private int jDelayTimerMax = 50;
     private int jumpTimer = 0;
     private int fallTimer = 0;
     private int jDelayTimer = jDelayTimerMax;
@@ -53,8 +54,16 @@ public class GamePlayState extends BasicGameState{
     	Music musicPlayer = ResourceManager.getMusic("themeMusic");
     	musicPlayer.setVolume(.5f);
     	musicPlayer.loop();
-    	level = new RedLevel("testLevel", "GUY");//, enemies);
+    	
+    	//create all levels
+    	levels = new ArrayList<Level>();
+    	levels.add(new RedLevel("redmap", "GUY"));//, enemies);
+    	levels.add(new Level("testLevel", "GUY"));
+    	level = levels.get(0);
+    	
+    	//init first level
     	level.init();
+    	
     	cloudY = -2048;
     	pause = false;
     }
@@ -87,8 +96,18 @@ public class GamePlayState extends BasicGameState{
     	input = gc.getInput();
     	mainChar = level.getMainChar();
 
+    	if(mainChar.getY()+64 < 128){
+    		levels.get(1).init();
+    		level = levels.get(1);
+    	}
     	
-    	System.out.println("\n\njump: "+jumping+"\nfall:"+falling);
+    	if(input.isKeyPressed(Input.KEY_1)){
+    		levels.get(1).init();
+    		level = levels.get(1);
+    		System.out.println("init level 1\n");
+    	}
+    	
+    	//System.out.println("\n\njump: "+jumping+"\nfall:"+falling);
     	if(!jumping && !falling){
     		jDelayTimer+=delta;
     	}

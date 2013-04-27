@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="7" height="100" tilewidth="64" tileheight="64">
  <tileset firstgid="1" name="rainbowTileSet" tilewidth="64" tileheight="64">
-  <image source="../images/tilesets/rainbowTileSet.png" width="448" height="192"/>
+  <image source="../../../../Pictures/rainbowTileSet.png" width="448" height="192"/>
   <tile id="0">
    <properties>
     <property name="platform" value="true"/>
@@ -108,9 +108,117 @@
    </properties>
   </tile>
  </tileset>
+ <tileset firstgid="22" name="rainbowTileSet" tilewidth="64" tileheight="64">
+  <image source="../images/tilesets/rainbowTileSet.png" width="448" height="384"/>
+  <tile id="21">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
  <layer name="Tile Layer 1" width="7" height="100">
   <data encoding="base64" compression="zlib">
-   eJzVVdkOwjAM87ihnAP+/1fxAxFRSbIWdQwsWdpUybJztB2ALXkhF+QeL2zIMzknE3lVZydyRu7InlySB/JOdobmjVw7mqsGmoKkvo9KE4EmAs3cZ6mm+ESQHUoTQXYU1FND+9TIfSLQjLLD8flrmi3nU3rk+RRYmqXos/98PjV031N2Nkb2f9MUeJqCaDenrCcqNbVPKE2BdS8hyN6iR8D721GriSB77hNPTajsnk9BTXZ8kF0wxR7BqaeV3fKpUXrX1fQIRnY0yj5UTw+lu/ktn0M9sva99q6reYtL59PyWTKfY9fzAYRfGKA=
+   eJzVlYtOQjEQREfxgV6foF+B77eg+P9/5Ulkk03TLu0NiE5yEgjJZGa3LRNJV3ANN3ALd3APD/AIT/AML/AKb/AOU5jBB3zCHL5gCw7gHHbgCC5gH4ZwBgPoYAx7+tEpbMMhjGAXjuGywtPUuc8nzlOBpwLPNGetp+VU0F3OU0F3VczTy+f0SnMq8Iy6q5Dzr3n2PUu582k7KuU05TxrNUq+p+fTy++9S35bR/f/5mkqeZqiu7nJearR0+eU8zTl3iUF3VexIyU51cNTQfc0pxaect1LOU0t3dWju2kT90iFeea653J61b51LTtSprtW1H3ZPEuqvZu/lXPZjnL3vfWta/kvrj2fuZw153Pd8/wGnmgcQQ==
   </data>
  </layer>
 </map>
