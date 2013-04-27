@@ -53,8 +53,8 @@ public class GamePlayState extends BasicGameState{
     	screenWidth = ResourceManager.getGlobalInt("SCREEN_WIDTH");
     	screenHeight = ResourceManager.getGlobalInt("SCREEN_HEIGHT");
     	Music musicPlayer = ResourceManager.getMusic("themeMusic");
-    	musicPlayer.setVolume(.5f);
     	musicPlayer.loop();
+    	musicPlayer.setVolume(.25f);
     	
     	//create all levels
     	levels = new ArrayList<Level>();
