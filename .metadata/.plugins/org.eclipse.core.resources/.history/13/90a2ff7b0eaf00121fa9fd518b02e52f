@@ -1,7 +1,6 @@
 package net.umc.ludumdare.states;
 
 import net.umc.ludumdare.common.Level;
-import net.umc.ludumdare.common.Sprite;
 import net.umc.ludumdare.tools.ResourceManager;
 
 import org.newdawn.slick.GameContainer;
@@ -17,7 +16,6 @@ public class GamePlayState extends BasicGameState{
     int stateID = 1;
     private int screenWidth, screenHeight;
     private Level level;
-    private boolean pause;
     
     public GamePlayState( int stateID ) 
     {
@@ -33,7 +31,6 @@ public class GamePlayState extends BasicGameState{
     	screenHeight = ResourceManager.getGlobalInt("SCREEN_HEIGHT");
     	level = new Level("redmap", "GUY");
     	level.init();
-    	pause = false;
     }
  
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
@@ -42,32 +39,18 @@ public class GamePlayState extends BasicGameState{
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
-    	if (pause) return;
-    	
     	level.update(gc, sbg, delta);
     	Input input = gc.getInput();
-    	Sprite mainChar = level.getMainChar();
     	if (input.isKeyDown(Input.KEY_LEFT)) {
-    		if (mainChar.getX() - 4 >= 0) {
-    			mainChar.setX(mainChar.getX() - 4);
+    		if (level.getMainChar().getX() - 4 >= 0) {
+    			level.getMainChar().setX(level.getMainChar().getX() - 4);
     		}
     	}
     	else if (input.isKeyDown(Input.KEY_RIGHT)) {
-    		if (mainChar.getX() + 64 + 4 <= 448) {
-    			mainChar.setX(mainChar.getX() + 4);
+    		if (level.getMainChar().getX() + 64 + 4 <= 448) {
+    			level.getMainChar().setX(level.getMainChar().getX() + 4);
     		}
     	}
-    	
-    	if (mainChar.getY() <= 0) {
-    		return;
-    	}
-    	
-    	int panelX = (int)(mainChar.getX() + 32) / 64;
-    	int panelY = (int)(mainChar.getY() + 48) / 64;
-    	
-    	if (!level.getPlatform()[panelX][panelY]) {
-    		//pause = true;
-    		level.init();
-    	}
     }
+	
 }

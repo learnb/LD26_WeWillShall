@@ -66,8 +66,7 @@ public class GamePlayState extends BasicGameState{
     	int panelY = (int)(mainChar.getY() + 48) / 64;
     	
     	if (!level.getPlatform()[panelX][panelY]) {
-    		//pause = true;
-    		level.init();
+    		pause = true;
     	}
     }
 }

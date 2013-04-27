@@ -46,11 +46,11 @@ public class Level {
 			}
 		}
 		//setup platform map array
-		setPlatform(new boolean[levelMap.getWidth()][levelMap.getHeight()]);
+		platform = new boolean[levelMap.getWidth()][levelMap.getHeight()];
 		for(int row=0; row<levelMap.getWidth(); row++){
 			for(int col=0; col<levelMap.getHeight(); col++){
 				if(levelMap.getTileProperty(levelMap.getTileId(row, col, 0), "platform", "false").equals("true")){
-					getPlatform()[row][col] = true;
+					platform[row][col] = true;
 				}
 			}
 		}
@@ -110,14 +110,6 @@ public class Level {
 
 	public void setY(int y) {
 		this.y = y;
-	}
-
-	public boolean[][] getPlatform() {
-		return platform;
-	}
-
-	public void setPlatform(boolean[][] platform) {
-		this.platform = platform;
 	}
 	
 }
