@@ -138,6 +138,6 @@ public class GamePlayState extends BasicGameState{
     	}
     }
     
-    public static boolean getJumping() { return jumping; }
-    public static boolean getFalling() { return falling; }
+    private static boolean getJumping() { return jumping; }
+    private static boolean getFalling() { return falling; }
 }

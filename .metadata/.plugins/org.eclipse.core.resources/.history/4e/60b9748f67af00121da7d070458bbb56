@@ -27,8 +27,8 @@ public class GamePlayState extends BasicGameState{
     
     //main character variables
     private Sprite mainChar;
-    private static boolean jumping = false;	//ascending
-    private static boolean falling = false;	//descending
+    private boolean jumping = false;	//ascending
+    private boolean falling = false;	//descending
     private int jumpTimerMax = 400;
     private int fallTimerMax = 400;
     private int jDelayTimerMax = 500;
@@ -137,7 +137,4 @@ public class GamePlayState extends BasicGameState{
     		level.init();
     	}
     }
-    
-    public static boolean getJumping() { return jumping; }
-    public static boolean getFalling() { return falling; }
 }

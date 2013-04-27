@@ -72,10 +72,10 @@ public class Level {
 	
 	public void render(GameContainer gc, Graphics g){
 		levelMap.render(0, 0);
+		mainChar.render(gc, g);
 		for(Sprite e : enemyList){
 			e.render(gc, g);
 		}
-		mainChar.render(gc, g);
 	}
 	
 	

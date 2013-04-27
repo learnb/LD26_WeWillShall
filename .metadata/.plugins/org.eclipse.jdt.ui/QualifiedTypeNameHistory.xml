@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="net.umc.ludumdare.sprites.Ship"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="net.umc.ludumdare.sprites.BlueShot"/>
 <fullyQualifiedTypeName name="net.umc.ludumdare.common.Projectile"/>
 <fullyQualifiedTypeName name="net.umc.ludumdare.common.Sprite"/>
@@ -20,4 +19,7 @@
 <fullyQualifiedTypeName name="net.umc.ludumdare.MainGame"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Music"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.common.RedLevel"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.states.GamePlayState"/>
 </qualifiedTypeNameHistroy>

@@ -2,7 +2,6 @@ package net.umc.ludumdare.common;
 
 import java.util.ArrayList;
 
-import net.umc.ludumdare.states.GamePlayState;
 import net.umc.ludumdare.tools.ResourceManager;
 
 import org.newdawn.slick.GameContainer;
@@ -66,16 +65,16 @@ public class Level {
 			else{
 				continue;
 			}		
-			if (!GamePlayState.getFalling() && !GamePlayState.getJumping() && checkCollision(e, mainChar)) init();
+			if (checkCollision(e, mainChar)) { System.out.println("coliided");init();}
 		}
 	}
 	
 	public void render(GameContainer gc, Graphics g){
 		levelMap.render(0, 0);
+		mainChar.render(gc, g);
 		for(Sprite e : enemyList){
 			e.render(gc, g);
 		}
-		mainChar.render(gc, g);
 	}
 	
 	

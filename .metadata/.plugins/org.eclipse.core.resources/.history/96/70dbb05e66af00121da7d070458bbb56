@@ -3,7 +3,6 @@ package net.umc.ludumdare.states;
 import java.util.ArrayList;
 
 import net.umc.ludumdare.common.Level;
-import net.umc.ludumdare.common.RedLevel;
 import net.umc.ludumdare.common.Sprite;
 import net.umc.ludumdare.tools.ResourceManager;
 
@@ -27,8 +26,8 @@ public class GamePlayState extends BasicGameState{
     
     //main character variables
     private Sprite mainChar;
-    private static boolean jumping = false;	//ascending
-    private static boolean falling = false;	//descending
+    private boolean jumping = false;	//ascending
+    private boolean falling = false;	//descending
     private int jumpTimerMax = 400;
     private int fallTimerMax = 400;
     private int jDelayTimerMax = 500;
@@ -53,7 +52,9 @@ public class GamePlayState extends BasicGameState{
     	Music musicPlayer = ResourceManager.getMusic("themeMusic");
     	musicPlayer.setVolume(.5f);
     	musicPlayer.loop();
-    	level = new RedLevel("redmap", "GUY");//, enemies);
+    	ArrayList<String> enemies = new ArrayList<String>();
+    	enemies.add("GUY");
+    	level = new Level("redmap", "GUY", enemies);
     	level.init();
     	cloudY = -2048;
     	pause = false;
@@ -137,7 +138,4 @@ public class GamePlayState extends BasicGameState{
     		level.init();
     	}
     }
-    
-    public static boolean getJumping() { return jumping; }
-    public static boolean getFalling() { return falling; }
 }
