@@ -99,10 +99,6 @@ public class Sprite {
 		images[spriteCnt/15].draw(x - (64 * (scale-1) / 2), y - (64 * (scale-1) / 2), scale);
 	}
 	
-	public void renderFlipped(GameContainer gc, Graphics g, float scale, boolean flippedHor, boolean flippedVert){
-		images[spriteCnt/15].getFlippedCopy(flippedHor, flippedVert).draw(x, y);
-	}
-	
 	public void update(GameContainer gc, StateBasedGame sbg, int delta){
 		spriteCnt++;
 		if(spriteCnt>=15*images.length){

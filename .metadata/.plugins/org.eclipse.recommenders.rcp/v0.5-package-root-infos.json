@@ -195,19 +195,6 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "org.xerial.sqlite-jdbc",
-    "version": {
-      "major": 3,
-      "minor": 7,
-      "micro": 2,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "cea9f7f8e6bcb580d953a8651fb8391640de0f85",
-    "jarFileModificationDate": "2013-04-22T21:31:59.738-04:00",
-    "location": "C:\\projects\\LudumDare\\LudumDare\\libs\\sqlite-jdbc-3.7.2.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "lwjgl",
     "version": {
       "major": -1,
@@ -221,16 +208,16 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "slick",
+    "symbolicName": "org.xerial.sqlite-jdbc",
     "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
+      "major": 3,
+      "minor": 7,
+      "micro": 2,
       "qualifier": ""
     },
-    "jarFileFingerprint": "dcb1c4dfb10f3e37cc950dd051668c0ae50134e3",
-    "jarFileModificationDate": "2013-04-22T21:31:59.658-04:00",
-    "location": "C:\\projects\\LudumDare\\LudumDare\\libs\\slick.jar",
+    "jarFileFingerprint": "cea9f7f8e6bcb580d953a8651fb8391640de0f85",
+    "jarFileModificationDate": "2013-04-22T21:31:59.738-04:00",
+    "location": "C:\\projects\\LudumDare\\LudumDare\\libs\\sqlite-jdbc-3.7.2.jar",
     "javaRuntime": false
   },
   {
@@ -244,6 +231,19 @@
     "jarFileFingerprint": "dcb1c4dfb10f3e37cc950dd051668c0ae50134e3",
     "jarFileModificationDate": "2013-04-22T21:31:59.658-04:00",
     "location": "C:\\projects\\LudumDare\\LudumDareWarmup\\libs\\slick.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "slick",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "dcb1c4dfb10f3e37cc950dd051668c0ae50134e3",
+    "jarFileModificationDate": "2013-04-22T21:31:59.658-04:00",
+    "location": "C:\\projects\\LudumDare\\LudumDare\\libs\\slick.jar",
     "javaRuntime": false
   },
   {
