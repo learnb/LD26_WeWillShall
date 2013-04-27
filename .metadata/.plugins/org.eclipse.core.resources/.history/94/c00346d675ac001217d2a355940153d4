@@ -1,0 +1,15 @@
+package net.umc.ludumdare.sprites;
+
+import net.umc.ludumdare.common.Projectile;
+import net.umc.ludumdare.tools.ResourceManager;
+
+public class BlueShot extends Projectile {
+
+	public BlueShot(int x, int y) {
+		image = ResourceManager.getImage("blueshot");
+		this.x = x;
+		this.y = y;
+		velX = 12;
+	}
+	
+}

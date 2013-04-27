@@ -1,0 +1,158 @@
+package net.umc.ludumdare.states;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+import net.umc.ludumdare.common.Projectile;
+import net.umc.ludumdare.common.Sprite;
+import net.umc.ludumdare.sprites.BlueShot;
+import net.umc.ludumdare.sprites.Ship;
+import net.umc.ludumdare.tools.ResourceManager;
+
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
+import org.newdawn.slick.Input;
+import org.newdawn.slick.SlickException;
+
+import org.newdawn.slick.state.BasicGameState;
+import org.newdawn.slick.state.StateBasedGame;
+
+public class PlayState extends BasicGameState{
+
+    int stateID = 2, bgPos = 500;
+    private Ship ship;
+    private Image spacebg;
+    private ArrayList<BlueShot> shots;
+    private ArrayList<Projectile> enemies;
+    private int screenWidth, screenHeight;
+    private int shipVelX = 4, shipVelY = 3;
+    
+    public PlayState( int stateID ) 
+    {
+       this.stateID = stateID;
+    }
+ 
+    public int getID() {
+        return stateID;
+    }
+ 
+    public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
+    	ship = new Ship();
+    	ship.x = ship.y = 10;
+    	ship.width = ship.height = 64;
+    	screenWidth = ResourceManager.getGlobalInt("SCREEN_WIDTH");
+    	screenHeight = ResourceManager.getGlobalInt("SCREEN_HEIGHT");
+    	spacebg = ResourceManager.getImage("space_bg");
+    	shots = new ArrayList<BlueShot>();
+    	enemies = new ArrayList<Projectile>();
+    }
+ 
+    public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
+    	// background
+    	g.drawImage(spacebg, bgPos, 0);
+    	g.drawImage(spacebg, bgPos, 500);
+    	g.drawImage(spacebg, bgPos+500, 0);
+    	g.drawImage(spacebg, bgPos+500, 500);
+    	g.drawImage(spacebg, bgPos-500, 0);
+    	g.drawImage(spacebg, bgPos-500, 500);
+    	
+    	// projectiles
+    	for(BlueShot bs: shots) {
+    		bs.render(gc, sbg, g);
+    	}
+    	
+    	for(Projectile p: enemies){
+    		p.render(gc, sbg, g);
+    	}
+    	
+    	// game play
+    	ship.render(gc, sbg, g);
+    	
+    	// HUD
+    	//g.drawImage(ResourceManager.getImage("ship16"), 100, 10);
+    	g.drawImage(ResourceManager.getImage("ship32"), 150, 10);
+    }
+ 
+    public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
+    	Input input = gc.getInput();
+    	HashSet<Integer> shotsToRemove = new HashSet<Integer>();
+    	HashSet<Integer> enemiesToRemove = new HashSet<Integer>();
+    	for(int i = shots.size() - 1; i >= 0; i--) {
+    		if (shots.get(i).dead || shots.get(i).x >= screenWidth) {
+    			shotsToRemove.add(i);
+    		}
+    		else {
+    			shots.get(i).update(gc, sbg, delta);
+    		}
+    	}
+    	
+    	for(int i = enemies.size() - 1; i >= 0; i--) {
+    		boolean collided = false;
+    		if (enemies.get(i).dead || enemies.get(i).x + enemies.get(i).width < 0 || 
+    				enemies.get(i).y + enemies.get(i).height < 0) {
+    			enemiesToRemove.add(i);
+    		}
+    		else {
+    			enemies.get(i).update(gc, sbg, delta);
+    			for (int j = shots.size() - 1; j >= 0; j--) {
+    				if (collides(enemies.get(i), shots.get(j))) {
+    					enemies.get(i).collides(gc, sbg, delta);
+    					shots.get(j).collides(gc, sbg, delta);
+    					collided = true;
+    					break;
+    				}
+    			}
+    		}
+    		if (collided) continue;
+    		if (collides(ship,enemies.get(i))) {
+    			ship.collides(gc, sbg, delta);
+    			enemies.get(i).collides(gc, sbg, delta);
+    		}
+    	}
+    	
+    	for(Integer idx: shotsToRemove) {
+    		shots.remove(shots.get(idx));
+    	}
+    	
+    	for(Integer idx: enemiesToRemove) {
+    		enemies.remove(enemies.get(idx));
+    	}
+    	
+    	if (input.isKeyPressed(Input.KEY_SPACE)) {
+    		ResourceManager.getSound("blop").play();
+    		if (shots.size() < 5) {
+    			shots.add(new BlueShot(ship.x + ship.width - 50, ship.y + (ship.height/2)));
+    		}
+    	}
+    	
+    	if (input.isKeyDown(Input.KEY_LEFT)) {
+    		if (ship.x > 0) ship.x -= shipVelX;
+    	}
+    	else if (input.isKeyDown(Input.KEY_RIGHT)) {
+    		if (ship.x + ship.width < screenWidth) ship.x += shipVelX;
+    	}
+    	
+    	if (input.isKeyDown(Input.KEY_UP)) {
+    		if (ship.y > 0) ship.y -= shipVelY;
+    	}
+    	else if (input.isKeyDown(Input.KEY_DOWN)) {
+    		if (ship.y + ship.height < screenHeight) ship.y += shipVelY;
+    	}
+    	
+    	bgPos = bgPos > 0 ? bgPos - 2 : 500;
+    }
+	
+    private boolean collides(Sprite a, Sprite b) {
+    	if (a.x + a.width < b.x) {
+    		if (a.x > b.x + b.width) {
+    			if (a.y + a.height < b.y) {
+    				if (a.y > b.y + b.height) {
+    					return false;
+    				}
+    			}
+    		}
+    	}
+    	return true;
+    }
+}

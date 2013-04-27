@@ -1,0 +1,12 @@
+package net.umc.ludumdare.sprites;
+
+import net.umc.ludumdare.common.Sprite;
+import net.umc.ludumdare.tools.ResourceManager;
+
+public class Ship extends Sprite {
+	
+	public Ship() {
+		//super();
+		image = ResourceManager.getImage("ship");
+	}
+}

@@ -1,0 +1,26 @@
+package net.umc.ludumdare.sprites;
+
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.SlickException;
+import org.newdawn.slick.state.StateBasedGame;
+
+import net.umc.ludumdare.common.Projectile;
+import net.umc.ludumdare.states.PlayState;
+import net.umc.ludumdare.tools.ResourceManager;
+
+public class RedShip extends Projectile {
+	
+	public RedShip(int x, int y) {
+		//super();
+		image = ResourceManager.getImage("redship");
+		velY = -(PlayState.random.nextInt(15));
+		this.x = x;
+		this.y = y;
+		width = height = 64;
+	}
+	
+	public void collides(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
+		dead = true;
+		PlayState.score += (-10 * (velX + velY));
+	}
+}

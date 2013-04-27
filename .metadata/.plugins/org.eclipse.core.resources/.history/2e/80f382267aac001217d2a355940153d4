@@ -1,0 +1,17 @@
+package net.umc.ludumdare.sprites;
+
+import net.umc.ludumdare.common.Projectile;
+import net.umc.ludumdare.tools.ResourceManager;
+
+public class BigShip extends Projectile {
+	
+	public BigShip(int x, int y) {
+		//super();
+		image = ResourceManager.getImage("blueship");
+		velX = -5;
+		this.x = x;
+		this.y = y;
+		width = 96; 
+		height = 72;
+	}
+}

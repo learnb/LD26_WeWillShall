@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="net.umc.ludumdare.sprites.Ship"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Image"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.tools.ResourceManager"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.sprites.BlueShot"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.common.Projectile"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.common.Sprite"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.sprites.BlueShip"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.sprites.RedShip"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.sprites.YellowShip"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.states.PlayState"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.states.GameOver"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.MainGame"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.sprites.BigShip"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+</qualifiedTypeNameHistroy>
