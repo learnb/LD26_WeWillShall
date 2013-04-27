@@ -53,7 +53,7 @@ public class GamePlayState extends BasicGameState{
     	Music musicPlayer = ResourceManager.getMusic("themeMusic");
     	musicPlayer.setVolume(.5f);
     	musicPlayer.loop();
-    	level = new RedLevel("redmap", "GUY");//, enemies);
+    	level = new RedLevel("testLevel", "GUY");//, enemies);
     	level.init();
     	cloudY = -2048;
     	pause = false;
