@@ -6,6 +6,7 @@ import net.umc.ludumdare.tools.ResourceManager;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
 
 public class Level {
@@ -51,8 +52,11 @@ public class Level {
 		}
 	}
 	
-	public void update(){
-		
+	public void update(GameContainer gc, StateBasedGame sbg, int delta){
+		mainChar.update(gc, sbg, delta);
+		for(Sprite e : enemyList){
+			e.update(gc, sbg, delta);
+		}
 	}
 	
 	public void render(GameContainer gc, Graphics g){

@@ -1,27 +1,34 @@
 package net.umc.ludumdare.common;
 
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.state.StateBasedGame;
 
 public class Sprite {
 	
 	// Private Members
 	private Image[] images;
 	private float x, y, velX, velY;
+	private int spriteCnt;
 	
 	// Constructors
 	public Sprite() {
 		images = null;
 		x = y = velX = velY = 0;
+		spriteCnt = 0;
 	}
 
 	public Sprite(Image image) {
 		images = new Image[] { image };
 		x = y = velX = velY = 0;
+		spriteCnt = 0;
 	}
 	
 	public Sprite(Image[] images) {
 		this.images = images;
 		x = y = velX = velY = 0;
+		spriteCnt = 0;
 	}
 	
 	public Sprite(Image[] images, float x, float y, float velX, float velY) {
@@ -30,6 +37,7 @@ public class Sprite {
 		this.y = y;
 		this.velX = velX;
 		this.velY = velY;
+		spriteCnt = 0;
 	}
 	
 	public Sprite(Image image, float x, float y, float velX, float velY) {
@@ -38,6 +46,7 @@ public class Sprite {
 		this.y = y;
 		this.velX = velX;
 		this.velY = velY;
+		spriteCnt = 0;
 	}
 	
 	// Accessors
@@ -81,4 +90,16 @@ public class Sprite {
 		temp[images.length] = image;
 		images = temp;
 	}
+	
+	public void render(GameContainer gc, Graphics g){
+		g.drawImage(images[spriteCnt/15], x, y);
+	}
+	
+	public void update(GameContainer gc, StateBasedGame sbg, int delta){
+		spriteCnt++;
+		if(spriteCnt>=15*images.length){
+			spriteCnt = 0;
+		}
+	}
+	
 }
