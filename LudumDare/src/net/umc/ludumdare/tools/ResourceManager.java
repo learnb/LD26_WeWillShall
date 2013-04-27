@@ -71,6 +71,10 @@ public class ResourceManager {
 		return (Sound)getResource(res, ResourceTypes.SOUND);
 	}
 	
+	public static Music getMusic(String res) {
+		return (Music)getResource(res, ResourceTypes.MUSIC);
+	}
+	
 	public static Object getResource(String res) {
 		return getResource(res, ResourceTypes.UNDEFINED);
 	}
