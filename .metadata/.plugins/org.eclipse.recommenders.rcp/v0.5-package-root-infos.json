@@ -195,19 +195,6 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "lwjgl",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "b9acde346914aa47ff87ae0bbab4b29fe2ec13fd",
-    "jarFileModificationDate": "2013-04-27T12:08:14.987-04:00",
-    "location": "C:\\Users\\ccm82_000\\Documents\\GitHub\\LD26_WeWillShall\\LudumDare\\libs\\lwjgl.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "org.xerial.sqlite-jdbc",
     "version": {
       "major": 3,
@@ -221,16 +208,16 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "slick",
+    "symbolicName": "lwjgl",
     "version": {
       "major": -1,
       "minor": -1,
       "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "dcb1c4dfb10f3e37cc950dd051668c0ae50134e3",
-    "jarFileModificationDate": "2013-04-22T21:31:59.658-04:00",
-    "location": "C:\\projects\\LudumDare\\LudumDareWarmup\\libs\\slick.jar",
+    "jarFileFingerprint": "b9acde346914aa47ff87ae0bbab4b29fe2ec13fd",
+    "jarFileModificationDate": "2013-04-27T12:08:14.987-04:00",
+    "location": "C:\\Users\\ccm82_000\\Documents\\GitHub\\LD26_WeWillShall\\LudumDare\\libs\\lwjgl.jar",
     "javaRuntime": false
   },
   {
@@ -244,6 +231,19 @@
     "jarFileFingerprint": "dcb1c4dfb10f3e37cc950dd051668c0ae50134e3",
     "jarFileModificationDate": "2013-04-22T21:31:59.658-04:00",
     "location": "C:\\projects\\LudumDare\\LudumDare\\libs\\slick.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "slick",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "dcb1c4dfb10f3e37cc950dd051668c0ae50134e3",
+    "jarFileModificationDate": "2013-04-22T21:31:59.658-04:00",
+    "location": "C:\\projects\\LudumDare\\LudumDareWarmup\\libs\\slick.jar",
     "javaRuntime": false
   },
   {

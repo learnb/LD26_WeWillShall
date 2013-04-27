@@ -66,12 +66,12 @@ public class GamePlayState extends BasicGameState{
     	g.drawImage(ResourceManager.getImage("cloudbg"), 0, cloudY + 2048);
     	g.translate((screenWidth - 448) / 2, screenHeight - level.getMainChar().getY() - 128);
     	level.render(gc, g);
+    	System.out.println("Scale: " + 1 + (jumpTimer / jumpTimerMax));
     	if (jumping)
-    		level.getMainChar().render(gc, g, 1 + (float)(jumpTimer/jumpTimerMax));
+    		g.scale(2, 2);//(1 + (float)(jumpTimer / jumpTimerMax), 1 + (float)(jumpTimer / jumpTimerMax));
     	else if (falling)
-    		level.getMainChar().render(gc, g, 2 - (float)(fallTimer/fallTimerMax));
-    	else
-    		level.getMainChar().render(gc, g);
+    		g.scale(2, 2);// - (jumpTimer / jumpTimerMax), 2 - (jumpTimer / jumpTimerMax));
+    	level.getMainChar().render(gc, g);
     	g.resetTransform();
     }
  

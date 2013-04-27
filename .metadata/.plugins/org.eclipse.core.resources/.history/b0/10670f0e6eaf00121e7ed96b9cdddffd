@@ -96,7 +96,7 @@ public class Sprite {
 	}
 	
 	public void render(GameContainer gc, Graphics g, float scale){
-		images[spriteCnt/15].draw(x - (64 * scale / 2), y - (64 * scale / 2), scale);
+		images[spriteCnt/15].draw(x, y, scale);
 	}
 	
 	public void update(GameContainer gc, StateBasedGame sbg, int delta){

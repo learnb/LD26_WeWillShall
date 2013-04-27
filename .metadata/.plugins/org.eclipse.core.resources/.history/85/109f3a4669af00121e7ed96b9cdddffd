@@ -75,7 +75,7 @@ public class Level {
 		for(Sprite e : enemyList){
 			e.render(gc, g);
 		}
-		//mainChar.render(gc, g);
+		mainChar.render(gc, g);
 	}
 	
 	
