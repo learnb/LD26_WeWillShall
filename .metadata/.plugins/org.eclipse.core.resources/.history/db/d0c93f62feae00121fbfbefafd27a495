@@ -37,6 +37,5 @@ public class MainGame extends StateBasedGame {
     public void initStatesList(GameContainer gameContainer) throws SlickException {
     	this.addState(new SplashScreenState(SPLASHSCREENSTATE));
     	this.addState(new MainMenuState(MAINMENUSTATE));
-    	this.addState(new MainMenuState(OPTIONS));
     }
 }
