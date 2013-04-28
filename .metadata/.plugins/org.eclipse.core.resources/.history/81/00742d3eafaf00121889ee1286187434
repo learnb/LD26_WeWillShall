@@ -33,7 +33,7 @@ public class GamePlayState extends BasicGameState{
     private static boolean falling = false;	//descending
     private int jumpTimerMax = 400;
     private int fallTimerMax = 400;
-    private int jDelayTimerMax = 25;
+    private int jDelayTimerMax = 50;
     private int jumpTimer = 0;
     private int fallTimer = 0;
     private int jDelayTimer = jDelayTimerMax;
@@ -62,8 +62,7 @@ public class GamePlayState extends BasicGameState{
     	levels.add(new Level("levelone", "GUY"));
     	levels.add(new Level("leveltwo", "GUY"));
     	levels.add(new Level("yellowlevel", "GUY"));
-    	levels.add(new Level("greenlevel", "GUY"));
-    	level = levels.get(3);
+    	level = levels.get(0);
     	
     	//init first level
     	level.init();

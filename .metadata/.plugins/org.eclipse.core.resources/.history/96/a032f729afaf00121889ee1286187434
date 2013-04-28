@@ -57,22 +57,6 @@ public class Level {
 				if(levelMap.getTileProperty(levelMap.getTileId(row, col, 0), "platform", "false").equals("true")){
 					getPlatform()[row][col] = true;
 				}
-				if (levelMap.getLayerCount() == 2) {
-					String type = levelMap.getTileProperty(levelMap.getTileId(row, col, 1), "type", "false");
-					if (type == null || type.equals(Constants.EMPTY)) continue;
-					if (type.equals("cloud")) {
-						platforms.add(new CloudPlatform(row * 64, col * 64));
-					}
-					else if (type.equals("electric")) {
-						enemyList.add(new ElectricBall(row * 64, col * 64));
-					}
-					else if (type.equals("snow")) {
-						enemyList.add(new SnowBall(row * 64, col * 64));
-					}
-					else if (type.equals("bird")) {
-						enemyList.add(new BirdBall(row * 64, col * 64));
-					}
-				}
 			}
 		}
 	}
@@ -94,7 +78,7 @@ public class Level {
 	}
 	
 	public void render(GameContainer gc, Graphics g){
-		levelMap.render(0, 0, 0);
+		levelMap.render(0, 0);
 		for(Sprite e : enemyList){
 			e.render(gc, g);
 		}
