@@ -17,7 +17,6 @@ public class SplashScreenState extends BasicGameState{
     int stateID = 0;
     int color = 255;
     int colorSpeed = -2;
-    private int screenWidth, screenHeight;
     
     public SplashScreenState( int stateID ) 
     {
@@ -29,16 +28,11 @@ public class SplashScreenState extends BasicGameState{
     }
  
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
-    	screenWidth = ResourceManager.getGlobalInt("SCREEN_WIDTH");
-    	screenHeight = ResourceManager.getGlobalInt("SCREEN_HEIGHT");
+    	
     }
  
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
-    	g.setColor(Color.white);
-    	g.setBackground(Color.white);
-    	
-    	g.drawImage(ResourceManager.getImage("splash"),(screenWidth / 2) - 400, (screenHeight / 2) - 300);
-    	g.setColor(new Color(0, 0, 0, color));
+    	g.setColor(new Color(255, 255, 255, color));
     	g.drawString("Press 'Enter' to start.", 300, 0);
     }
  
