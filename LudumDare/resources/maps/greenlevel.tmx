@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="7" height="200" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="rainbowTileSet" tilewidth="64" tileheight="64">
+  <image source="../images/tilesets/rainbowTileSet.png" width="448" height="384"/>
+  <tile id="0">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="43" name="rainbowTileSet" tilewidth="64" tileheight="64">
+  <image source="../images/tilesets/rainbowTileSet.png" width="448" height="384"/>
+  <tile id="21">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="platform" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="85" name="enemytileset" tilewidth="64" tileheight="64">
+  <image source="../images/tilesets/enemytileset.png" width="256" height="64"/>
+  <tile id="0">
+   <properties>
+    <property name="type" value="bird"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="type" value="cloud"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="type" value="electric"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="type" value="snow"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="7" height="200">
+  <data encoding="base64" compression="zlib">
+   eJy9V0luBDEI5NC3ueWQfd+TD/X/fxKixBJBFJs9KQkN8thlDBjTp0R0xnLOcsFyyXLFcs1yw3LLcsdyz/LA8sjyxPLM8sLyyvLG8s7ywfJJPzjQX5yI8W99E+ObmL+pdZoHQfJIfjLGV3AidPfqrh3zI56ObnFK6Dly3LPfyoHIfsSP4pI5y+oYef6ZyaWtYLM8L7pr3l5S1zwWKnkl9/LsQbnhncUaX6F79ao7PqtLWDHStdTyp461hao9qIZ4+ZC9F9V6NZCJLwF9Juctnuzd9GzTqNbzbJ23YlGNkT6L559jxJ0I+5/IPrulj7WWrnkizkxMNVb1Idm1qzmrsRvo9Cpdzmgtyued7DjuhO08/P5v+W2nnq+kbZ79FnaHP/IJuheotoz9unZ6/3U4K32L5vRqsrRV+iGyM9PXaWT7ZGuvqM6jt2OcT8+xxr2av/I7JduTDH3Yav16/VI03unlZL5EdSnbV/y3jjCT8xKVd1b7U+qIx6t1qM5rfo1uTY78iTBTQ1ZzRnFH50CcXk2O8jD7jTBsQ32a109K7GJOxx6EzPuI/IPs6b6PFr+F7pve7c8rnIhfY+Y+ZjmPUZO/APFKJ6s=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="7" height="200">
+  <data encoding="base64" compression="zlib">
+   eJzt1lkKACAIRVF32f530g5swqHHPT9BIJoGZQYAAABg1zjcf42LkJ3zNp8XV9E3T6f5RlA431isFbUoUuhnp/l0qsVz+wYqULjzGSJq/uU/k2ECCaMJhQ==
+  </data>
+ </layer>
+</map>
