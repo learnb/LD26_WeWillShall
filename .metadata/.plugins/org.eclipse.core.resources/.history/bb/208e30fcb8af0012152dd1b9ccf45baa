@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import net.umc.ludumdare.common.CloudPlatform;
 import net.umc.ludumdare.common.Level;
+import net.umc.ludumdare.common.RedLevel;
 import net.umc.ludumdare.common.Sprite;
 import net.umc.ludumdare.tools.ResourceManager;
 
