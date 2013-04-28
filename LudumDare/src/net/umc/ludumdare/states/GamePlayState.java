@@ -67,7 +67,7 @@ public class GamePlayState extends BasicGameState{
     	levels.add(new Level("indigolevel", 5));
     	levels.add(new Level("violetlevel", 6));
     	levels.add(new Level("bonuslevel", 7));
-    	level = levels.get(0);
+    	level = levels.get(7);
     	
     	//init first level
     	level.init();
@@ -100,9 +100,9 @@ public class GamePlayState extends BasicGameState{
     	
     	cloudY = cloudY >= 2048 ? -2048 : cloudY + 2;
     	
+    	mainChar = level.getMainChar();
     	level.update(gc, sbg, delta);
     	input = gc.getInput();
-    	mainChar = level.getMainChar();
 
     	//goal reached
     	if((mainChar.getY()+64 < 128) /*|| (input.isKeyPressed(Input.KEY_F))*/){

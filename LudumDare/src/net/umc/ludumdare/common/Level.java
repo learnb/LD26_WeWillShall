@@ -104,10 +104,12 @@ public class Level {
 			p.update(gc, sbg, delta);
 		}
 		if(!ResourceManager.getGlobalBoolean("level"+levelId+"coin")){
-			if(checkHeroCollision(mainChar, coin)){
-				ResourceManager.updateGlobal("level"+levelId+"coin", "true");
+			if(levelId != 7){
+				if(checkHeroCollision(mainChar, coin)){
+					ResourceManager.updateGlobal("level"+levelId+"coin", "true");
+				}
+				coin.update(gc, sbg, delta);
 			}
-			coin.update(gc, sbg, delta);
 		}
 	}
 	
@@ -120,7 +122,9 @@ public class Level {
 			p.render(gc, g);
 		}
 		if(!ResourceManager.getGlobalBoolean("level"+levelId+"coin")){
-			coin.render(gc, g);
+			if(levelId != 7){
+				coin.render(gc, g);
+			}
 		}
 		//mainChar.render(gc, g);
 	}
@@ -175,8 +179,8 @@ public class Level {
 	}
 	
 	public static boolean checkHeroCollision(Sprite mainChar, Sprite b) {
-		if (mainChar.getX() + 64 < b.getX()) return false;
-		if (mainChar.getX() > b.getX() + 64) return false;
+		if (mainChar.getX() + 60 < b.getX()) return false;
+		if (mainChar.getX() + 4> b.getX() + 64) return false;
 		if (mainChar.getY() + 64 < b.getY()) return false;
 		if (mainChar.getY() + 48 > b.getY() + 64) return false;
 		return true;
