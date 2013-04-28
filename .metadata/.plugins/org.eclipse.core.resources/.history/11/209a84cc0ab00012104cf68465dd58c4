@@ -1,0 +1,15 @@
+package net.umc.ludumdare.tools;
+
+import net.umc.ludumdare.common.Constants;
+
+public class StatsHelper {
+
+	public static int getDeathsByLevelNumber(int world) {
+		return ResourceManager.getGlobalInt(String.format("Level%sFails", world));
+	}
+	
+	public static void addDeathToWorld(int world) {
+		ResourceManager.updateGlobal("Level%sFails", (getDeathsByLevelNumber(world) + 1) + Constants.EMPTY);
+	}
+	
+}

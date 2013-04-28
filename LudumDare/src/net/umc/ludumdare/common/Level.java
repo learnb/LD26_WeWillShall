@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import net.umc.ludumdare.states.GamePlayState;
 import net.umc.ludumdare.tools.ResourceManager;
+import net.umc.ludumdare.tools.StatsHelper;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -20,20 +21,21 @@ public class Level {
 	private Sprite mainChar;
 	private ArrayList<Sprite> enemyList;
 	private ArrayList<CloudPlatform> platforms;
-	private String mapID, charID;
+	private String mapID;
 	private ArrayList<String> enemyIDs;
+	private int levelId;
 	
 	//constructors
-	public Level(String mapID, String charID, ArrayList<String> enemyIDs){
+	public Level(String mapID, ArrayList<String> enemyIDs){
 		this.mapID = mapID;
-		this.charID = charID;
 		this.enemyIDs = enemyIDs;
+		levelId = 0;
 		setPlatforms(new ArrayList<CloudPlatform>());
 	}
 	
-	public Level(String mapID, String charID){
+	public Level(String mapID, int levelId){
 		this.mapID = mapID;
-		this.charID = charID;
+		this.levelId = levelId;
 		setPlatforms(new ArrayList<CloudPlatform>());
 	}
 	
@@ -46,6 +48,9 @@ public class Level {
 		mainChar.setVelY(-5f);
 		enemyList = new ArrayList<Sprite>();
 		platforms = new ArrayList<CloudPlatform>();
+		
+		StatsHelper.addTryToWorld(levelId);
+		
 		if (enemyIDs != null) {
 			for(String id : enemyIDs){
 				enemyList.add(new Sprite(ResourceManager.getImage(id)));

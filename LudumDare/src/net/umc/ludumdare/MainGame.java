@@ -17,11 +17,12 @@ public class MainGame extends StateBasedGame {
     public static final int MAINMENUSTATE = 1;
     public static final int OPTIONS = 2;
     public static final int GAMEPLAYSTATE = 3;
+    public static final int STATSSTATE = 4;
     
     
     public MainGame()
     {
-        super("Ludum Dare");
+        super("Ludum Dare - Patty's Perilous Plunder");
     }
  
     public static void main(String[] args) throws SlickException
@@ -41,5 +42,6 @@ public class MainGame extends StateBasedGame {
     	this.addState(new MainMenuState(MAINMENUSTATE));
     	this.addState(new OptionsState(OPTIONS));
     	this.addState(new GamePlayState(GAMEPLAYSTATE));
+    	this.addState(new GamePlayState(STATSSTATE));
     }
 }

@@ -1,9 +1,8 @@
 package net.umc.ludumdare.states;
 
-import net.umc.ludumdare.MainGame;
-import net.umc.ludumdare.common.Level;
 import net.umc.ludumdare.tools.ResourceManager;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
@@ -12,13 +11,12 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
-public class GamePlayState extends BasicGameState{
+public class StatsState extends BasicGameState{
 
-    int stateID = 1;
+    int stateID = 4;
     private int screenWidth, screenHeight;
-    private Level level;
-    
-    public GamePlayState( int stateID ) 
+
+    public StatsState( int stateID ) 
     {
        this.stateID = stateID;
     }
@@ -30,15 +28,17 @@ public class GamePlayState extends BasicGameState{
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
     	screenWidth = ResourceManager.getGlobalInt("SCREEN_WIDTH");
     	screenHeight = ResourceManager.getGlobalInt("SCREEN_HEIGHT");
-    	level = new Level("redmap", "GUY");
+
     }
  
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
-    	level.render(gc, g);
+    	g.setBackground(Color.black);
+    	g.setColor(Color.white);
+    	
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
-    	level.update(gc, sbg, delta);
+    	Input input = gc.getInput();
     }
 	
 }

@@ -1,0 +1,106 @@
+package net.umc.ludumdare.states;
+
+import net.umc.ludumdare.MainGame;
+import net.umc.ludumdare.tools.ResourceManager;
+
+import org.newdawn.slick.Color;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Input;
+import org.newdawn.slick.SlickException;
+
+import org.newdawn.slick.state.BasicGameState;
+import org.newdawn.slick.state.StateBasedGame;
+
+public class StatsState extends BasicGameState{
+
+    int stateID = 4;
+    private int screenWidth, screenHeight;
+
+    public StatsState( int stateID ) 
+    {
+       this.stateID = stateID;
+    }
+ 
+    public int getID() {
+        return stateID;
+    }
+ 
+    public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
+    	screenWidth = ResourceManager.getGlobalInt("SCREEN_WIDTH");
+    	screenHeight = ResourceManager.getGlobalInt("SCREEN_HEIGHT");
+
+    }
+ 
+    public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
+    	g.setBackground(Color.black);
+    	g.setColor(Color.white);
+    	
+    }
+ 
+    public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
+    	Input input = gc.getInput();
+    	if (input.isKeyPressed(Input.KEY_DOWN)) {
+    		menuSelector = menuSelector == 0 ? 1 : 0;
+    	}
+    	else if (input.isKeyPressed(Input.KEY_UP)) {
+    		menuSelector = menuSelector == 0 ? 1 : 0;
+    	}
+    	
+    	if (input.isKeyPressed(Input.KEY_LEFT)) {
+    		if (menuSelector == 0) {
+    			resSelector = resSelector - 1 < 0 ? 6 : resSelector - 1;
+    		}
+    		else {
+    			fullscreenSelector = fullscreenSelector == 1 ? 0 : 1;
+    		}
+    	}
+    	if (input.isKeyPressed(Input.KEY_RIGHT)) {
+    		if (menuSelector == 0) {
+    			resSelector = resSelector + 1 > 6 ? 0 : resSelector + 1;
+    		}
+    		else {
+    			fullscreenSelector = fullscreenSelector == 1 ? 0 : 1;
+    		}
+    	}
+    	
+    	if (input.isKeyPressed(Input.KEY_ENTER)) {
+    		switch (resSelector) {
+	    		case 0:
+	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "800");
+	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "600");
+	    			break;
+	    		case 1:
+	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1024");
+	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "768");
+	    			break;
+	    		case 2:
+	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1280");
+	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "960");
+	    			break;
+	    		case 3:
+	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1280");
+	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "1024");
+	    			break;
+	    		case 4:
+	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1440");
+	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "900");
+	    			break;
+	    		case 5:
+	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1600");
+	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "900");
+	    			break;
+	    		case 6:
+	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1900");
+	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "1080");
+	    			break;
+	    			
+    		}
+    		if (fullscreenSelector == 0) ResourceManager.updateGlobal("FULLSCREEN", "TRUE");
+    		else ResourceManager.updateGlobal("FULLSCREEN", "FALSE");
+    		
+    		sbg.enterState(MainGame.MAINMENUSTATE);
+    	}
+    }
+	
+}

@@ -58,13 +58,13 @@ public class GamePlayState extends BasicGameState{
     	
     	//create all levels
     	levels = new ArrayList<Level>();
-    	levels.add(new Level("levelone", "GUY"));
-    	levels.add(new Level("leveltwo", "GUY"));
-    	levels.add(new Level("yellowlevel", "GUY"));
-    	levels.add(new Level("greenlevel", "GUY"));
-    	levels.add(new Level("bluelevel", "GUY"));
-    	levels.add(new Level("indigolevel", "GUY"));
-    	levels.add(new Level("violetlevel", "GUY"));
+    	levels.add(new Level("levelone", 0));
+    	levels.add(new Level("leveltwo", 1));
+    	levels.add(new Level("yellowlevel", 2));
+    	levels.add(new Level("greenlevel", 3));
+    	levels.add(new Level("bluelevel", 4));
+    	levels.add(new Level("indigolevel", 5));
+    	levels.add(new Level("violetlevel", 6));
     	level = levels.get(6);
     	
     	//init first level

@@ -8,12 +8,14 @@ import net.umc.ludumdare.data.DataService;
 import net.umc.ludumdare.exceptions.GlobalSettingDoesNotExistException;
 import net.umc.ludumdare.exceptions.ResourceDoesNotExistException;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.Font;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Music;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.Sound;
 import org.newdawn.slick.UnicodeFont;
+import org.newdawn.slick.font.effects.ColorEffect;
 import org.newdawn.slick.tiled.TiledMap;
 
 /*
@@ -25,6 +27,7 @@ public class ResourceManager {
 
 	private static Hashtable<String, Object> resources = new Hashtable<String, Object>();
 	private static Hashtable<String, String> globals = new Hashtable<String, String>();
+	private static Hashtable<String, UnicodeFont> fonts = new Hashtable<String, UnicodeFont>();
 	
 	public static String getGlobal(String key) {
 		if (key == null || key == Constants.EMPTY) {
@@ -78,11 +81,18 @@ public class ResourceManager {
 	}
 	
 	public static Font getFont(String res) {
-		return (Font)getResource(res, ResourceTypes.FONT);
+		return getFontResource(res);
 	}
 	
 	public static Object getResource(String res) {
 		return getResource(res, ResourceTypes.UNDEFINED);
+	}
+	
+	public static Font getFontResource(String res) {
+		if (fonts.containsKey(res)) {
+			return fonts.get(res);
+		}
+		else return null;
 	}
 	
 	public static Object getResource(String res, ResourceTypes type) {
@@ -154,6 +164,26 @@ public class ResourceManager {
 				e.printStackTrace();
 			}		
 		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static Font generateNewFont(String res, int size, Color color) {
+		if (fonts.containsKey(res)) {
+			return fonts.get(res);
+		}
+		
+		UnicodeFont font;
+		try {
+			font = new UnicodeFont(DataService.getResourcePath("coolfont", ResourceTypes.FONT), size, false, false);
+			font.addAsciiGlyphs();
+			font.getEffects().add(new ColorEffect());  // Create a default white color effect
+			font.loadGlyphs();
+		} catch (SlickException e) {
+			// TODO Auto-generated catch block
+			return null;
+		}
+		fonts.put(res, font);
+		return font;
 	}
 	
 	public static void updateGlobal(String key, String value) {

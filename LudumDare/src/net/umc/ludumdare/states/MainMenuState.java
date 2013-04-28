@@ -68,7 +68,7 @@ public class MainMenuState extends BasicGameState{
     	
     	mainChar.render(gc, g);
     	g.setColor(Color.black);
-    	ResourceManager.getFont("coolfont").drawString(0, 0, "Title", Color.yellow);
+    	//ResourceManager.getFont("coolfont").drawString(0, 0, "Title", Color.yellow);
     	g.drawString("Play Game", (screenWidth / 2) - 40, (screenHeight / 2) - 30);
     	g.drawString("Options", (screenWidth / 2) - 32, (screenHeight / 2));
     	g.drawString("Exit", (screenWidth / 2) - 20, (screenHeight / 2) + 30);

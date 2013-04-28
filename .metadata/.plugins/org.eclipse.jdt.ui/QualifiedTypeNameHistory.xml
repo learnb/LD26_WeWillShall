@@ -24,6 +24,10 @@
 <fullyQualifiedTypeName name="org.newdawn.slick.Font"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.TrueTypeFont"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.UnicodeFont"/>
-<fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
 <fullyQualifiedTypeName name="net.umc.ludumdare.MainGame"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.font.effects.ColorEffect"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.data.DataService"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.common.Constants"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.tools.StatsHelper"/>
 </qualifiedTypeNameHistroy>
