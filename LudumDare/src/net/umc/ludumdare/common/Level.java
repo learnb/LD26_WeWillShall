@@ -7,6 +7,7 @@ import net.umc.ludumdare.tools.ResourceManager;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
 
@@ -39,7 +40,7 @@ public class Level {
 	public void init(){
 		//load resources
 		levelMap = ResourceManager.getMap(mapID);
-		mainChar = new Sprite(ResourceManager.getImage(charID));
+		mainChar = new Sprite(new Image[] {ResourceManager.getImage("GUY"), ResourceManager.getImage("GUY2"), ResourceManager.getImage("GUY"), ResourceManager.getImage("GUY3")});
 		mainChar.setX(192);
 		mainChar.setY(levelMap.getHeight() * levelMap.getTileHeight() - 64);
 		mainChar.setVelY(-5f);
