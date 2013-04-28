@@ -141,7 +141,7 @@ public class GamePlayState extends BasicGameState{
     			mainChar.setX(mainChar.getX() + 4);
     		}
     	}
-    	if ((!input.isKeyDown(Input.KEY_SPACE) && jumping) || jumpTimer>=jumpTimerMax) {
+    	if (( (!input.isKeyDown(Input.KEY_SPACE) && !input.isKeyDown(Input.KEY_UP)) && jumping) || jumpTimer>=jumpTimerMax) {
     		//start falling
     		System.out.println("FALLING!");
     		falling = true;
@@ -149,7 +149,7 @@ public class GamePlayState extends BasicGameState{
     		fallTimer = 0;
     		jumping = false;
     	}
-    	if (input.isKeyDown(Input.KEY_SPACE) && !falling && (jDelayTimer>=jDelayTimerMax) && !(jumpTimer>=jumpTimerMax)) {
+    	if ((input.isKeyDown(Input.KEY_SPACE) || input.isKeyDown(Input.KEY_UP)) && !falling && (jDelayTimer>=jDelayTimerMax) && !(jumpTimer>=jumpTimerMax)) {
     		//start jumping
     		System.out.println("JUMPING!");
     		if(!jumping){
