@@ -63,7 +63,8 @@ public class GamePlayState extends BasicGameState{
     	levels.add(new Level("leveltwo", "GUY"));
     	levels.add(new Level("yellowlevel", "GUY"));
     	levels.add(new Level("greenlevel", "GUY"));
-    	level = levels.get(3);
+    	levels.add(new Level("bluelevel", "GUY"));
+    	level = levels.get(4);
     	
     	//init first level
     	level.init();
