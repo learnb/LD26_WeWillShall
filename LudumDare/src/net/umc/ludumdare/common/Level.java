@@ -24,6 +24,7 @@ public class Level {
 	private String mapID;
 	private ArrayList<String> enemyIDs;
 	private int levelId;
+	private Sprite coin;
 	
 	//constructors
 	public Level(String mapID, ArrayList<String> enemyIDs){
@@ -56,7 +57,7 @@ public class Level {
 				enemyList.add(new Sprite(ResourceManager.getImage(id)));
 			}
 		}
-		//setup platform map array
+		//scan map properties
 		setPlatform(new boolean[levelMap.getWidth()][levelMap.getHeight()]);
 		for(int row=0; row<levelMap.getWidth(); row++){
 			for(int col=0; col<levelMap.getHeight(); col++){
@@ -78,6 +79,11 @@ public class Level {
 					else if (type.equals("bird")) {
 						enemyList.add(new BirdBall(row * 64, col * 64));
 					}
+					
+					//check for coin tile
+					if(levelMap.getTileProperty(levelMap.getTileId(row, col, 1), "coin", "false").equals("true")){
+						coin = new Sprite(new Image[] {ResourceManager.getImage("coin1"), ResourceManager.getImage("coin2"), ResourceManager.getImage("coin3"), ResourceManager.getImage("coin2")}, row*64, col*64, 0, 0);
+					}
 				}
 			}
 		}
@@ -97,6 +103,12 @@ public class Level {
 		for(CloudPlatform p: platforms) {
 			p.update(gc, sbg, delta);
 		}
+		if(!ResourceManager.getGlobalBoolean("level"+levelId+"coin")){
+			if(checkHeroCollision(mainChar, coin)){
+				ResourceManager.updateGlobal("level"+levelId+"coin", "true");
+			}
+			coin.update(gc, sbg, delta);
+		}
 	}
 	
 	public void render(GameContainer gc, Graphics g){
@@ -106,6 +118,9 @@ public class Level {
 		}
 		for(CloudPlatform p: platforms) {
 			p.render(gc, g);
+		}
+		if(!ResourceManager.getGlobalBoolean("level"+levelId+"coin")){
+			coin.render(gc, g);
 		}
 		//mainChar.render(gc, g);
 	}

@@ -112,6 +112,7 @@
   <image source="../images/tilesets/rainbowTileSet.png" width="448" height="384"/>
   <tile id="21">
    <properties>
+    <property name="coin" value="true"/>
     <property name="platform" value="true"/>
    </properties>
   </tile>
@@ -246,7 +247,7 @@
  </layer>
  <layer name="Tile Layer 2" width="7" height="200">
   <data encoding="base64" compression="zlib">
-   eJztlzkOACEMA3kl/38KPRLiEHZsyLQrzQQaNqV4UU2cp16lWZi+VffN7mmHNV/vqwD/ahflVvShnEi3izNJkr9hvp+Ipvv8EX6lLrsZdbe7PYV/a6emw/5woxu177z4zZV+92TuoiMUZkDy+vlmIM7/2502VGUYhw==
+   eJztl7kNACAMAxmNKdh/FHokHqE42CTXIp0TGnApWjQR562XaRZP36nbMvc2x2u+0dcA/tNclJvRh3Ii3SrOJEli4/l+IjLZ569gvyXsd6mYt4L9b62UqdAfLHJf9Z0fz1QZu6dnF53BMAOS3/fbgdg/2p1214MYxw==
   </data>
  </layer>
 </map>

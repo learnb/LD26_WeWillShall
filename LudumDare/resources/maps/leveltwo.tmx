@@ -109,6 +109,7 @@
   </tile>
   <tile id="21">
    <properties>
+    <property name="coin" value="true"/>
     <property name="platform" value="true"/>
    </properties>
   </tile>
@@ -215,7 +216,12 @@
  </tileset>
  <layer name="Tile Layer 1" width="7" height="200">
   <data encoding="base64" compression="zlib">
-   eJzlV0kOwzAIRLn1llP3fW///8BOD5ZSxGLHcZSkSCMhGgYMxKFzIloAS2AFrIENsAV2wB44AEfgBJyBC3AFbsAdeABP4AW86VcqkuVrnwG18FuwW76eBP7YuKXtZNiJ/PNKZynNGdM76Zma7DrwZ6wcLF8rN80+xL5rYs25VrfA2VV/S/Jrktp3LR9tDruyk2Enw06GPXBq0qZuJTnbzEBsPTk/tzf5JXuMrvm2OUsXIuXZjNWUStEDj6RLPF4+Gn8t6BI/r7PE472/Wm5j+p6OhdPrNY8l6SGWpHOeUpzafAbf1P3Tm3lrziUp2SNvB8v5/mrvKddJyVPLIaWeOf8Rpnx2687MmXnum/pONXOT5J/uz9x9so++l+D0Zsnb2XjclJ1f8rVymwJn7m7c157c9Xzm1oHHHVvfS3BOeZZy76Uh6x+0ARkT
+   eJzlV8tuw0AIRL7l5lObpk3TpEn6+P8PzOSwkosG2PV6rdhFGgkRM7CA1+RJRJ6BLfAC7IBX4A3YA+/AAfgAjsAJ+ATOwAW4Al/AN/AD/Mpf6YTL3b4BevJbsnu+kST+3Lit7eLYReLzsrO05szpHXumF78O+hkvB8/Xy82yP2LfLfHm3Kpb4pyqvy35LSntu5WPNYdT2cWxi2MXx544LRlTt5acY2Ygt56aX9uH/Myeo1u+Y84yhbA8h7GG0hl64mE644nysfh7ojN+XWfGE72/Vm5L+p4uhTPqtY7F9BSL6Zonh5PNYcRpzWfyLd0/o5n35pxJyx5FO1jN99d6T7UuRp5WDiX1rPmPsOaze3dmzcxr39J3apgbk/90f9buk3P0vQVnNEvRzqbjluz8zNfLbQ2ctbvxXHvy1PNZWwcdd2l9b8G55lmqvZceWb8BGQgZHA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="7" height="200">
+  <data encoding="base64" compression="zlib">
+   eJztzgENAAAIA6CnsH9UY1w3SEACAAD3TDsAAAAPLAy/ABc=
   </data>
  </layer>
 </map>

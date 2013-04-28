@@ -217,6 +217,7 @@
   <image source="../images/tilesets/rainbowTileSet.png" width="448" height="384"/>
   <tile id="21">
    <properties>
+    <property name="coin" value="true"/>
     <property name="platform" value="true"/>
    </properties>
   </tile>
@@ -346,12 +347,12 @@
  </tileset>
  <layer name="Tile Layer 1" width="7" height="200">
   <data encoding="base64" compression="zlib">
-   eJzNVzluxDAMVOVuuyD3fSfVdtvl/8/KLDYCCIK3LTsDDEDQ0oiSJVI6b61dgJfgFXgN3oC34B14Dz6Aj+AT+Ay+gK/gG/gOfoCf4Bf4De7BA/jTTui25G+Ovwn+5vilvhRcP6Mp+WnfSfl29O+Ub1n/EWfGt8los/vzW3Fq6H21eKQ50rF430mx+1hWPJH11DS5TWPj68Pnpdm0r2TTeKJ+CzTOjF3VtODNS0Mlfk/TizM7x8iet8bSNDVsoalhTv6prmdUUzt3XIfPndsjNCPw1sfLmb2NVo8iOUTSp32luVg5ysoz1vkdtZeqe7uKufU6g4Oh6d1DNIzKdZH/m6lZEU3eXrI5Kv8ok5Ore6Aas4Xq/p9Tf5fQrN5tKNaeu5TDo/ec6B2MjyXVMkkzYnP9EXmexyxpalj67FRrR/SeLPmXPuMj7mAequ+dTN898fM2/S5UfQeNqHFz39rZM1i9i1bPwhqaa9fNrTWj79813jJbalIs9S7+z/99hOYvZdgc4Q==
+   eJzNVzluxDAMVOVuuzxku+2C3Ped/P8tmcVGAEHwtmVngAEIWhpRskRKF621S/AKvAZvwFvwDrwHH8BH8Al8Bl/AV/ANfAc/wE/wC/wGf8A9eADP2wndlvzN8TfB3xy/1JeC62c0JT/tOynfjv6d8i3rP+LM+DYZbXZ/fitODb2vFo80RzoW7zspdh/Liieynpomt2lsfH34vDSb9pVsGk/Ub4HGmbGrmha8eWmoxO9penFm5xjZ89ZYmqaGLTQ1zMk/1fWMamrnjuvwuXN7hGYE3vp4ObO30epRJIdI+rSvNBcrR1l5xjq/o/ZSdW9XMbdeZ3AwNL17iIZRuS7yfzM1K6LJ20s2R+UfZXJydQ9UY7ZQ3f9z6u8SmtW7DcXac5dyePSeE72D8bGkWiZpRmyuPyLP85glTQ1Ln51q7YjekyX/0md8xB3MQ/W9k+m7J37ept+Fqu+gETVu7ls7eward9HqWVhDc+26ubVm9P27xltmS02Kpd7F//m/j9D8BT4tIFM=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="7" height="200">
   <data encoding="base64" compression="zlib">
-   eJztl1sKQCEIRNuk+99KP/ezulOI1jgHIohejqbUmj/2tdWYTeZ53iFzfdSeLzGKCeGP/fRVmdn/yluP9l9mvIzqA1JXGEDtyYiHnTOV7zFOdGHRMjIn3wyDvap5XFTW4ibbVR/4zhI4p35h9+fOP4FdC5RqOnSSAhHv
+   eJztl8sNACEIRC3NJui/lb141N1RCQsDLzEmRsUZP8TW9JFR3tpk0U9zDX+Ot5ozErMzUegjH3VWVvqj3PWbObtxvFtm+QHJKwygeqx173pd7z3GiS8sXlq+yZ5h0Ost50WI55nMXnjSXvmBL1aBc7ov7Pu5809g9wIlmw8PkD4SLw==
   </data>
  </layer>
 </map>

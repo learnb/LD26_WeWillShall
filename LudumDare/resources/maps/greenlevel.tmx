@@ -112,6 +112,7 @@
   <image source="../images/tilesets/rainbowTileSet.png" width="448" height="384"/>
   <tile id="21">
    <properties>
+    <property name="coin" value="true"/>
     <property name="platform" value="true"/>
    </properties>
   </tile>
@@ -241,12 +242,12 @@
  </tileset>
  <layer name="Tile Layer 1" width="7" height="200">
   <data encoding="base64" compression="zlib">
-   eJy9V7luBTEIpNguXYrc950U271u//+7wiqxRBADGPtlpFGIZc9isDHvjIjOmRfMS+YV85p5w7xl3jHvmQ/MR+YT85n5wnxlvjHfmR/MT+YX/eCE/uJUjO/2IsYXMX9R67QOgtSR+mSMz9BEqH6rurbNj3QqtqUpoefIcc9/6wxE/iN9lJfMXmbnyIvPyFlaOnyW+0V3zfuWtLWOhZ5zJb/l+YPOhrcXa3yG7dWr6vioLWHlSNdSK5461xZ6/UE1xDsP2XvRW68aMvklYI+ceUsnezc93zR663m2zlu56M2R3osXn2PknQjHn8jeu2W3tZatdSLNTE41ZvUh2bWzNXtz11DpVaqa0Vp0nley87gS9nO3D2THbTN8y8RK+ub5b+Hg6EcxQfcC1ZYdG9X9RKhq9vQtWtOryZv4X8Yh8jPT12lk+2TrW1GdR29Hy4WeY417NX/m75RsT9LslqPm8/r7V+bI66nQeKWXk2c7qkvZvuK/bYSRMy/R887qeEob6Xi1DtV5ra9RrclRPBFGashszSjvqJ4jTa8mR+cw+xuh+Yb6NK+flNjEnIo/CJn3EcUH+VN9Hy19C9U3vdqf92gifY2R+5jVPEZN/gZNCCQr
+   eJy9V0luBDEI5NC33PKQvs2tD9n3Pfn/W0IrsUQQBRh7UlIpxLKrMdiYOSOic+YF85J5xbxm3jBvmXfMe+YD85H5xHxmvjBfmW/Md+YH85P5RT84ob84FeO7vYjxRcxf1DqtgyB1pD4Z4zM0Earfqq5t8yOdim1pSug5ctzz3zoDkf9IH+Uls5fZOfLiM3KWlg6f5X7RXfO+JW2tY6HnXMlvef6gs+HtxRqfYXv1qjo+aktYOdK11IqnzrWFXn9QDfHOQ/Ze9Narhkx+CdgjZ97Syd5NzzeN3nqerfNWLnpzpPfixecYeSfC8Sey927Zba1la51IM5NTjVl9SHbtbM3e3DVUepWqZrQWneeV7DyuhP3c7QPZcdsM3zKxkr55/ls4OPpRTNC9QLVlx0Z1PxGqmj19i9b0avIm/pdxiPzM9HUa2T7Z+lZU59Hb0XKh51jjXs2f+Tsl25M0u+Wo+bz+/pU58noqNF7p5eTZjupStq/4bxth5MxL9LyzOp7SRjperUN1XutrVGtyFE+EkRoyWzPKO6rnSNOrydE5zP5GaL6hPs3rJyU2MafiD0LmfUTxQf5U30dL30L1Ta/25z2aSF9j5D5mNY9Rk78BJV0nnQ==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="7" height="200">
   <data encoding="base64" compression="zlib">
-   eJztls0SgCAIhHtL3v9NGg9dLH9QgV2m71LWiAvirNfljwzGqMzoPJnLbCzWej5462WvV6GlWQb/VmPuIo13L7S5RX3XwtC70Rq/1u+dE0us++HnjVRPVpD0a7Qg9fyOP2rmRHqtluj714l5SGejgLS/FmTIr/aFSJ9gqpuWDPVE2h8kLT1WPTADGXreAwvNLPcZD25WXxd0
+   eJztlkcOwCAMBHlafuH//yTikAsJxb0oc0kTZG0WLa3ZA5vnqJzolKzldK6s/Xyw1pu9X52ZZth8o87JBSb3VmBr83qPJYN3vTV+/X+1TzTR9sPPGxiuFC4BHVwieQSjJZLnOfmIGeOZtVi8z18S4yLtjU6k9dWgQn1jLkjkBFdLRSr0M9L6RNKygpqBFajgeQs0NGc5z1hwA4SMF7Q=
   </data>
  </layer>
 </map>

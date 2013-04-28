@@ -112,6 +112,7 @@
   <image source="../images/tilesets/rainbowTileSet.png" width="448" height="384"/>
   <tile id="21">
    <properties>
+    <property name="coin" value="true"/>
     <property name="platform" value="true"/>
    </properties>
   </tile>
@@ -219,6 +220,11 @@
  <layer name="Tile Layer 1" width="7" height="200">
   <data encoding="base64" compression="zlib">
    eJzFVklqBDEMFOQ2t/5R9m2yJ/9/S3SIQYjS2nanoMAtbLkk21JfEtEV85p5w7xl3jHvmQ/MR+YT85l5Zr4wX5lvzHfmB/OT+cX8Zv7QGmzMC+bp73uMNzUmw14dy32HTxLjaK3Uifwge0YPygmCtVb7l9D7or08nRGiPHvaELrn28WMe1WN0ULW5yxt3XzOPKO9OT/KZxS7te8qOzXt6D6stHdq4ADqC9I+ENVD7y2gHhRpqN5DAvOzdd66Awh77rbVE4ceb76Vw6iH7q1vyI+nQc8nyuUz8lOtISc1T67V+qRPnS85V+/t3bHK27R6uh5LPXKstXvI6kGxEJhj/fNk9orO3dOv/Ws/lXeK8mbpRHF5Oqv/MJWab82PfFZ6354z6v4bWP3Ly2HmfL2eeNS+M8Ya1hu04p11Z2boP6oHdeMix458ImRqsmXP9m7LPjPePXUpoxP5RKjEZc2XqNxPiRVvWerxYkeo5CTrU+rRfjYnFmlH6y17pwdk6u/AzFrm6dF7SfznXaxo7rzbVf67a7vjX4vOKuk=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="7" height="200">
+  <data encoding="base64" compression="zlib">
+   eJztzgENAAAIA6BHs38qY1w3SEAC8Me0AwAAAACHLGEcAEE=
   </data>
  </layer>
 </map>

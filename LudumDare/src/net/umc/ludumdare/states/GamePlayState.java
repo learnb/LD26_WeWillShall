@@ -2,6 +2,7 @@ package net.umc.ludumdare.states;
 
 import java.util.ArrayList;
 
+import net.umc.ludumdare.MainGame;
 import net.umc.ludumdare.common.CloudPlatform;
 import net.umc.ludumdare.common.Level;
 import net.umc.ludumdare.common.Sprite;
@@ -104,8 +105,17 @@ public class GamePlayState extends BasicGameState{
 
     	//goal reached
     	if((mainChar.getY()+64 < 128) || (input.isKeyPressed(Input.KEY_F))){
-    		levels.get(levels.indexOf(level)+1).init();
-    		level = levels.get(levels.indexOf(level)+1);
+    		if(levels.indexOf(level) < 6){
+    			levels.get(levels.indexOf(level)+1).init();
+    			level = levels.get(levels.indexOf(level)+1);
+    		}else{
+    			ResourceManager.updateGlobal("win", "true");
+    			sbg.enterState(MainGame.STATSSTATE);
+    		}
+    	}
+    	
+    	if(input.isKeyDown(Input.KEY_ESCAPE) && ResourceManager.getGlobalBoolean("win")){
+    		sbg.enterState(MainGame.STATSSTATE);
     	}
     	
     	if(input.isKeyPressed(Input.KEY_1)){
