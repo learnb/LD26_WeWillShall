@@ -176,7 +176,7 @@ public class ResourceManager {
 		try {
 			font = new UnicodeFont(DataService.getResourcePath("coolfont", ResourceTypes.FONT), size, false, false);
 			font.addAsciiGlyphs();
-			font.getEffects().add(new ColorEffect(java.awt.Color.black));  // Create a default white color effect
+			font.getEffects().add(new ColorEffect());  // Create a default white color effect
 			font.loadGlyphs();
 		} catch (SlickException e) {
 			// TODO Auto-generated catch block

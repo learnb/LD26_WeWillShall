@@ -30,4 +30,5 @@
 <fullyQualifiedTypeName name="org.newdawn.slick.Font"/>
 <fullyQualifiedTypeName name="net.umc.ludumdare.tools.StatsHelper"/>
 <fullyQualifiedTypeName name="net.umc.ludumdare.MainGame"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
 </qualifiedTypeNameHistroy>

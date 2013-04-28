@@ -22,13 +22,13 @@ public class GamePlayState extends BasicGameState{
 	//game variables
     int stateID = 1;
     private int screenWidth, screenHeight;
-    private static ArrayList<Level> levels;
+    private ArrayList<Level> levels;
     private static Level level;
     private boolean pause;
     private Input input;
     
     //main character variables
-    private static Sprite mainChar;
+    private Sprite mainChar;
     private static boolean jumping = false;	//ascending
     private static boolean falling = false;	//descending
     private int jumpTimerMax = 400;
@@ -114,7 +114,7 @@ public class GamePlayState extends BasicGameState{
     		}
     	}
     	
-    	if(input.isKeyPressed(Input.KEY_ESCAPE) && ResourceManager.getGlobalBoolean("win")){
+    	if(input.isKeyDown(Input.KEY_ESCAPE) && ResourceManager.getGlobalBoolean("win")){
     		sbg.enterState(MainGame.STATSSTATE);
     	}
     	
@@ -197,8 +197,6 @@ public class GamePlayState extends BasicGameState{
     }
     
     public static void setLevel(int levelCode) {
-    	level = levels.get(levelCode);
-    	mainChar = level.getMainChar();
-    	level.init();
+    	level = levels.get(levelCod);
     }
 }

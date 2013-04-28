@@ -101,10 +101,6 @@ public class StatsState extends BasicGameState{
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
     	Input input = gc.getInput();
     	
-    	if (input.isKeyPressed(Input.KEY_ESCAPE)) {
-    		sbg.enterState(MainGame.MAINMENUSTATE);
-    	}
-    	
     	if (input.isKeyPressed(Input.KEY_1) || input.isKeyPressed(Input.KEY_NUMPAD1)) {
     		GamePlayState.setLevel(0);
     		sbg.enterState(MainGame.GAMEPLAYSTATE);
@@ -139,7 +135,9 @@ public class StatsState extends BasicGameState{
         		sbg.enterState(MainGame.GAMEPLAYSTATE);
     		}
     	}
-
+    	else if (input.isKeyPressed(Input.KEY_ESCAPE)) {
+    		sbg.enterState(MainGame.MAINMENUSTATE);
+    	}
     	
     	cloudY = cloudY >= 2048 ? -2048 : cloudY + 2;
     }

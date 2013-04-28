@@ -91,7 +91,7 @@ public class StatsState extends BasicGameState{
     	statFont.drawString(midX, 500, StatsHelper.getTriesByLevelNumber(0) + "");
     	if (!allCoins()) {
     		g.setColor(Color.red);
-    		g.fillRect(midX - 350, 510, 700, 10);
+    		g.fillRect(midX - 350, 515, 700, 25);
     	}
     	//statFont.drawString(midX + 250, 500, String.format(COINFORMAT, 0));
     	
@@ -101,45 +101,33 @@ public class StatsState extends BasicGameState{
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
     	Input input = gc.getInput();
     	
-    	if (input.isKeyPressed(Input.KEY_ESCAPE)) {
-    		sbg.enterState(MainGame.MAINMENUSTATE);
-    	}
-    	
     	if (input.isKeyPressed(Input.KEY_1) || input.isKeyPressed(Input.KEY_NUMPAD1)) {
-    		GamePlayState.setLevel(0);
-    		sbg.enterState(MainGame.GAMEPLAYSTATE);
+    		// Enter level
     	}
     	else if (input.isKeyPressed(Input.KEY_2) || input.isKeyPressed(Input.KEY_NUMPAD2)) {
-    		GamePlayState.setLevel(1);
-    		sbg.enterState(MainGame.GAMEPLAYSTATE);
+    		// Enter level
     	}
     	else if (input.isKeyPressed(Input.KEY_3) || input.isKeyPressed(Input.KEY_NUMPAD3)) {
-    		GamePlayState.setLevel(2);
-    		sbg.enterState(MainGame.GAMEPLAYSTATE);
+    		// Enter level
     	}
     	else if (input.isKeyPressed(Input.KEY_4) || input.isKeyPressed(Input.KEY_NUMPAD4)) {
-    		GamePlayState.setLevel(3);
-    		sbg.enterState(MainGame.GAMEPLAYSTATE);
+    		// Enter level
     	}
     	else if (input.isKeyPressed(Input.KEY_5) || input.isKeyPressed(Input.KEY_NUMPAD5)) {
-    		GamePlayState.setLevel(4);
-    		sbg.enterState(MainGame.GAMEPLAYSTATE);
+    		// Enter level
     	}
     	else if (input.isKeyPressed(Input.KEY_6) || input.isKeyPressed(Input.KEY_NUMPAD6)) {
-    		GamePlayState.setLevel(5);
-    		sbg.enterState(MainGame.GAMEPLAYSTATE);
+    		// Enter level
     	}
     	else if (input.isKeyPressed(Input.KEY_7) || input.isKeyPressed(Input.KEY_NUMPAD7)) {
-    		GamePlayState.setLevel(6);
-    		sbg.enterState(MainGame.GAMEPLAYSTATE);
+    		// Enter level
     	}
     	else if (input.isKeyPressed(Input.KEY_8) || input.isKeyPressed(Input.KEY_NUMPAD8)) {
-    		if (allCoins()) {
-    			GamePlayState.setLevel(7);
-        		sbg.enterState(MainGame.GAMEPLAYSTATE);
-    		}
+    		// Enter level
     	}
-
+    	else if (input.isKeyPressed(Input.KEY_ESCAPE)) {
+    		sbg.enterState(MainGame.MAINMENUSTATE);
+    	}
     	
     	cloudY = cloudY >= 2048 ? -2048 : cloudY + 2;
     }
