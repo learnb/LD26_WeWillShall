@@ -13,7 +13,6 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.Music;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.Sound;
-import org.newdawn.slick.UnicodeFont;
 import org.newdawn.slick.tiled.TiledMap;
 
 /*
@@ -146,9 +145,9 @@ public class ResourceManager {
 		}
 		else if (type == ResourceTypes.FONT) {
 			try {
-				Font font = new UnicodeFont(DataService.getResourcePath(res, type), 72, false, false);//DataService.getResourcePath(res, type));
-				if (font != null && !resources.containsKey(res)) {
-					resources.put(res, font);
+				Font map = new Font(DataService.getResourcePath(res, type));
+				if (map != null && !resources.containsKey(res)) {
+					resources.put(res, map);
 				}
 			} catch (SlickException e) {
 				e.printStackTrace();

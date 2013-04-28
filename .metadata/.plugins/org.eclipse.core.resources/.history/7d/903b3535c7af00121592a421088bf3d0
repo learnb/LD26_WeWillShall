@@ -1,13 +1,11 @@
 package net.umc.ludumdare.states;
 
 import net.umc.ludumdare.MainGame;
-import net.umc.ludumdare.common.Sprite;
 import net.umc.ludumdare.tools.ResourceManager;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 
@@ -18,7 +16,6 @@ public class MainMenuState extends BasicGameState{
 
     int stateID = 1;
     private int screenWidth, screenHeight, menuSelector, cloudY;
-    private Sprite mainChar;
     
     public MainMenuState( int stateID ) 
     {
@@ -34,11 +31,6 @@ public class MainMenuState extends BasicGameState{
     	screenHeight = ResourceManager.getGlobalInt("SCREEN_HEIGHT");
     	menuSelector = 0;
     	cloudY = -2048;
-    	
-		mainChar = new Sprite(new Image[] {ResourceManager.getImage("GUY"), ResourceManager.getImage("GUY2"), ResourceManager.getImage("GUY"), ResourceManager.getImage("GUY3")});
-		mainChar.setX((screenWidth / 2)-32);
-		mainChar.setY((screenWidth / 2)-32);
-		mainChar.setVelY(0f);
     }
  
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
@@ -46,7 +38,7 @@ public class MainMenuState extends BasicGameState{
     	g.drawImage(ResourceManager.getImage("cloudbg"), 0, cloudY);
     	g.drawImage(ResourceManager.getImage("cloudbg"), 0, cloudY + 2048);
     	
-    	mainChar.render(gc, g);
+    	
     	
     	ResourceManager.getFont("coolfont").drawString(0, 0, "Title", Color.yellow);
     	g.drawString("Play Game", (screenWidth / 2) - 40, (screenHeight / 2) - 30);
@@ -78,8 +70,6 @@ public class MainMenuState extends BasicGameState{
 	    			gc.exit();
     		}
     	}
-    	
-    	mainChar.update(gc, sbg, delta);
     }
 	
 }

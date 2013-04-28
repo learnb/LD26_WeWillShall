@@ -46,7 +46,7 @@ public class MainMenuState extends BasicGameState{
     	g.drawImage(ResourceManager.getImage("cloudbg"), 0, cloudY);
     	g.drawImage(ResourceManager.getImage("cloudbg"), 0, cloudY + 2048);
     	
-    	mainChar.render(gc, g);
+    	
     	
     	ResourceManager.getFont("coolfont").drawString(0, 0, "Title", Color.yellow);
     	g.drawString("Play Game", (screenWidth / 2) - 40, (screenHeight / 2) - 30);

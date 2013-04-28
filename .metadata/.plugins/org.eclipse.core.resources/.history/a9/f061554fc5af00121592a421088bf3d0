@@ -53,9 +53,6 @@ public class DataService {
 		else if (type == ResourceTypes.MUSIC) {
 			sqlStatement = String.format(SQLStatements.GET_MUSIC, resourceId);
 		}
-		else if (type == ResourceTypes.FONT) {
-			sqlStatement = String.format(SQLStatements.GET_FONT, resourceId);
-		}
 		
 	    try {
 	    	Statement statement = connection.createStatement();

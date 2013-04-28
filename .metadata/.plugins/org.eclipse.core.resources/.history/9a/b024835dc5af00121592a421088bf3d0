@@ -8,7 +8,6 @@ public class SQLStatements {
 	public static final String GET_SOUND = "SELECT PATH FROM RESOURCES WHERE RESOURCE_ID='%s' AND TYPE='SOUND';";
 	public static final String GET_MAP = "SELECT PATH FROM RESOURCES WHERE RESOURCE_ID='%s' AND TYPE='MAP';";	
 	public static final String GET_MUSIC = "SELECT PATH FROM RESOURCES WHERE RESOURCE_ID='%s' AND TYPE='MUSIC';";
-	public static final String GET_FONT = "SELECT PATH FROM RESOURCES WHERE RESOURCE_ID='%s' AND TYPE='FONT';";
 	public static final String INSERT_RESOURCE = "INSERT INTO RESOURCES (RESOURCE_ID, TYPE, PATH) VALUES ('%s','%s','%s');";
 	public static final String UPDATE_RESOURCE = "UPDATE RESOURCES SET TYPE='%s',PATH='%s' WHERE RESOURCE_ID='%s';";
 	public static final String GET_ALL_RESOURCE_IDS = "SELECT RESOURCE_ID FROM RESOURCES;";

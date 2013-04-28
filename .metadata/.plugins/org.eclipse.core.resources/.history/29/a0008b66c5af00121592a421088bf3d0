@@ -1,5 +1,5 @@
 package net.umc.ludumdare.common;
 
 public enum ResourceTypes {
-	UNDEFINED, IMAGE, SOUND, MAP, MUSIC, FONT
+	UNDEFINED, IMAGE, SOUND, MAP, MUSIC
 }

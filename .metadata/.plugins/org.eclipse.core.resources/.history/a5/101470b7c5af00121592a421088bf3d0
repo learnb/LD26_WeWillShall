@@ -8,12 +8,10 @@ import net.umc.ludumdare.data.DataService;
 import net.umc.ludumdare.exceptions.GlobalSettingDoesNotExistException;
 import net.umc.ludumdare.exceptions.ResourceDoesNotExistException;
 
-import org.newdawn.slick.Font;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Music;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.Sound;
-import org.newdawn.slick.UnicodeFont;
 import org.newdawn.slick.tiled.TiledMap;
 
 /*
@@ -77,10 +75,6 @@ public class ResourceManager {
 		return (Music)getResource(res, ResourceTypes.MUSIC);
 	}
 	
-	public static Font getFont(String res) {
-		return (Font)getResource(res, ResourceTypes.FONT);
-	}
-	
 	public static Object getResource(String res) {
 		return getResource(res, ResourceTypes.UNDEFINED);
 	}
@@ -139,16 +133,6 @@ public class ResourceManager {
 				TiledMap map = new TiledMap(DataService.getResourcePath(res, type));
 				if (map != null && !resources.containsKey(res)) {
 					resources.put(res, map);
-				}
-			} catch (SlickException e) {
-				e.printStackTrace();
-			}		
-		}
-		else if (type == ResourceTypes.FONT) {
-			try {
-				Font font = new UnicodeFont(DataService.getResourcePath(res, type), 72, false, false);//DataService.getResourcePath(res, type));
-				if (font != null && !resources.containsKey(res)) {
-					resources.put(res, font);
 				}
 			} catch (SlickException e) {
 				e.printStackTrace();

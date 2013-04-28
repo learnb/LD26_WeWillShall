@@ -146,7 +146,7 @@ public class ResourceManager {
 		}
 		else if (type == ResourceTypes.FONT) {
 			try {
-				Font font = new UnicodeFont(DataService.getResourcePath(res, type), 72, false, false);//DataService.getResourcePath(res, type));
+				Font font = new UnicodeFont(DataService.getResourcePath(res, type), 36, false, false);//DataService.getResourcePath(res, type));
 				if (font != null && !resources.containsKey(res)) {
 					resources.put(res, font);
 				}
