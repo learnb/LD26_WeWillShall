@@ -1,6 +1,5 @@
 package net.umc.ludumdare.states;
 
-import net.umc.ludumdare.MainGame;
 import net.umc.ludumdare.tools.ResourceManager;
 import net.umc.ludumdare.tools.StatsHelper;
 
@@ -96,33 +95,7 @@ public class StatsState extends BasicGameState{
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
     	Input input = gc.getInput();
     	
-    	if (input.isKeyPressed(Input.KEY_1) || input.isKeyPressed(Input.KEY_NUMPAD1)) {
-    		// Enter level
-    	}
-    	else if (input.isKeyPressed(Input.KEY_2) || input.isKeyPressed(Input.KEY_NUMPAD2)) {
-    		// Enter level
-    	}
-    	else if (input.isKeyPressed(Input.KEY_3) || input.isKeyPressed(Input.KEY_NUMPAD3)) {
-    		// Enter level
-    	}
-    	else if (input.isKeyPressed(Input.KEY_4) || input.isKeyPressed(Input.KEY_NUMPAD4)) {
-    		// Enter level
-    	}
-    	else if (input.isKeyPressed(Input.KEY_5) || input.isKeyPressed(Input.KEY_NUMPAD5)) {
-    		// Enter level
-    	}
-    	else if (input.isKeyPressed(Input.KEY_6) || input.isKeyPressed(Input.KEY_NUMPAD6)) {
-    		// Enter level
-    	}
-    	else if (input.isKeyPressed(Input.KEY_7) || input.isKeyPressed(Input.KEY_NUMPAD7)) {
-    		// Enter level
-    	}
-    	else if (input.isKeyPressed(Input.KEY_8) || input.isKeyPressed(Input.KEY_NUMPAD8)) {
-    		// Enter level
-    	}
-    	else if (input.isKeyPressed(Input.KEY_ESCAPE)) {
-    		sbg.enterState(MainGame.MAINMENUSTATE);
-    	}
+    	
     	
     	cloudY = cloudY >= 2048 ? -2048 : cloudY + 2;
     }
