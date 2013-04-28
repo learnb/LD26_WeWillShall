@@ -124,13 +124,6 @@ public class OptionsState extends BasicGameState{
     		g.setColor(Color.yellow);
     		g.drawString("False", 320, 80);
     	}
-    	
-    	g.setColor(Color.white);
-    	if (menuSelector == 0) {
-    		g.drawRect(10, 20, 120, 20);
-    	} else {
-    		g.drawRect(10, 80, 120, 20);
-    	}
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
@@ -152,10 +145,10 @@ public class OptionsState extends BasicGameState{
     	}
     	if (input.isKeyPressed(Input.KEY_RIGHT)) {
     		if (menuSelector == 0) {
-    			resSelector = resSelector + 1 > 6 ? 0 : resSelector + 1;
+    			resSelector = resSelector + 1 > 6 ? 0 : 1;
     		}
     		else {
-    			fullscreenSelector = fullscreenSelector == 1 ? 0 : 1;
+    			fullscreenSelector = fullscreenSelector == 1 ? 0 : resSelector + 1;
     		}
     	}
     	

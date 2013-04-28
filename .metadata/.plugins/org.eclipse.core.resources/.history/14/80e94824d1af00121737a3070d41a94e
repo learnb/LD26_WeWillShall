@@ -1,6 +1,5 @@
 package net.umc.ludumdare.states;
 
-import net.umc.ludumdare.MainGame;
 import net.umc.ludumdare.tools.ResourceManager;
 
 import org.newdawn.slick.Color;
@@ -60,11 +59,7 @@ public class OptionsState extends BasicGameState{
     }
  
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
-    	g.setBackground(Color.black);
     	g.setColor(Color.white);
-    	
-    	g.drawString("Press 'Enter' to save changes. Client needs restarted for changes to take effect", (screenWidth/2) - 350, screenHeight - 30);
-    	
     	g.drawString("Resolution", 20, 20);
     	if (resSelector == 0) {
     		g.setColor(Color.yellow);
@@ -112,25 +107,6 @@ public class OptionsState extends BasicGameState{
     	}
     	g.drawString("1900 x 1080", 470, 40);
     	g.setColor(Color.white);
-    	
-    	g.drawString("Fullscreen", 20, 80);
-    	
-    	if (fullscreenSelector == 0) {
-    		g.drawString("False", 320, 80);
-    		g.setColor(Color.yellow);
-    		g.drawString("True", 170, 80);
-    	} else {
-    		g.drawString("True", 170, 80);
-    		g.setColor(Color.yellow);
-    		g.drawString("False", 320, 80);
-    	}
-    	
-    	g.setColor(Color.white);
-    	if (menuSelector == 0) {
-    		g.drawRect(10, 20, 120, 20);
-    	} else {
-    		g.drawRect(10, 80, 120, 20);
-    	}
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
@@ -142,60 +118,6 @@ public class OptionsState extends BasicGameState{
     		menuSelector = menuSelector == 0 ? 1 : 0;
     	}
     	
-    	if (input.isKeyPressed(Input.KEY_LEFT)) {
-    		if (menuSelector == 0) {
-    			resSelector = resSelector - 1 < 0 ? 6 : resSelector - 1;
-    		}
-    		else {
-    			fullscreenSelector = fullscreenSelector == 1 ? 0 : 1;
-    		}
-    	}
-    	if (input.isKeyPressed(Input.KEY_RIGHT)) {
-    		if (menuSelector == 0) {
-    			resSelector = resSelector + 1 > 6 ? 0 : resSelector + 1;
-    		}
-    		else {
-    			fullscreenSelector = fullscreenSelector == 1 ? 0 : 1;
-    		}
-    	}
-    	
-    	if (input.isKeyPressed(Input.KEY_ENTER)) {
-    		switch (resSelector) {
-	    		case 0:
-	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "800");
-	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "600");
-	    			break;
-	    		case 1:
-	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1024");
-	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "768");
-	    			break;
-	    		case 2:
-	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1280");
-	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "960");
-	    			break;
-	    		case 3:
-	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1280");
-	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "1024");
-	    			break;
-	    		case 4:
-	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1440");
-	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "900");
-	    			break;
-	    		case 5:
-	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1600");
-	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "900");
-	    			break;
-	    		case 6:
-	    			ResourceManager.updateGlobal("SCREEN_WIDTH", "1900");
-	    			ResourceManager.updateGlobal("SCREEN_HEIGHT", "1080");
-	    			break;
-	    			
-    		}
-    		if (fullscreenSelector == 0) ResourceManager.updateGlobal("FULLSCREEN", "TRUE");
-    		else ResourceManager.updateGlobal("FULLSCREEN", "FALSE");
-    		
-    		sbg.enterState(MainGame.MAINMENUSTATE);
-    	}
     }
 	
 }

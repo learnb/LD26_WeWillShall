@@ -55,7 +55,7 @@ public class ResourceManager {
 	
 	public static boolean getGlobalBoolean(String key) {
 		String value = getGlobal(key).toUpperCase();
-		if (value.equals("TRUE") || value == "T" || value == "1") {
+		if (value == "TRUE" || value == "T" || value == "1") {
 			return true;
 		}
 		return false;

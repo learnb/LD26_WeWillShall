@@ -127,9 +127,9 @@ public class OptionsState extends BasicGameState{
     	
     	g.setColor(Color.white);
     	if (menuSelector == 0) {
-    		g.drawRect(10, 20, 120, 20);
+    		g.drawRect(20, 20, 120, 20);
     	} else {
-    		g.drawRect(10, 80, 120, 20);
+    		g.drawRect(20, 80, 120, 20);
     	}
     }
  

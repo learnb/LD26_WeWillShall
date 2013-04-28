@@ -124,13 +124,6 @@ public class OptionsState extends BasicGameState{
     		g.setColor(Color.yellow);
     		g.drawString("False", 320, 80);
     	}
-    	
-    	g.setColor(Color.white);
-    	if (menuSelector == 0) {
-    		g.drawRect(10, 20, 120, 20);
-    	} else {
-    		g.drawRect(10, 80, 120, 20);
-    	}
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {

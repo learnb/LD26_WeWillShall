@@ -14,7 +14,6 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="net.umc.ludumdare.states.MainMenuState"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Input"/>
-<fullyQualifiedTypeName name="net.umc.ludumdare.MainGame"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Music"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="net.umc.ludumdare.common.RedLevel"/>
@@ -26,4 +25,5 @@
 <fullyQualifiedTypeName name="org.newdawn.slick.TrueTypeFont"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.UnicodeFont"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
+<fullyQualifiedTypeName name="net.umc.ludumdare.MainGame"/>
 </qualifiedTypeNameHistroy>

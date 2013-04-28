@@ -39,7 +39,7 @@ public class SplashScreenState extends BasicGameState{
     	
     	g.drawImage(ResourceManager.getImage("splash"),(screenWidth / 2) - 400, (screenHeight / 2) - 300);
     	g.setColor(new Color(0, 0, 0, color));
-    	g.drawString("Press 'Enter' to start.", (screenWidth/2) - 110, 0);
+    	g.drawString("Press 'Enter' to start.", (screenWidth/2) - 120, 0);
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {

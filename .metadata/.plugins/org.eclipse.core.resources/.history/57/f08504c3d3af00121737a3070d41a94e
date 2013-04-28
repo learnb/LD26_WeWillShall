@@ -129,7 +129,7 @@ public class DataService {
 			statement.setQueryTimeout(30);
 			ResultSet rs = statement.executeQuery(sqlStatement);
 			if (rs.next()){
-				statement.executeUpdate(String.format(SQLStatements.UPDATE_GLOBAL, value, key));
+				statement.executeUpdate(String.format(SQLStatements.UPDATE_GLOBAL, key, value));
 			}
 			else {
 				statement.executeUpdate(String.format(SQLStatements.CREATE_GLOBAL, key, value));
