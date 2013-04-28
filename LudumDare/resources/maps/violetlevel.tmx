@@ -241,12 +241,12 @@
  </tileset>
  <layer name="Tile Layer 1" width="7" height="200">
   <data encoding="base64" compression="zlib">
-   eJztlrkKwzAUBNWlS5f7dO7k/z8wk8IghI4nETCJd2FgCiNbEnjf3Dm3gCWsYA0b2MIO9nCAI3RwgjNc4Ao3uMMDnvCCCUxhJpfL5XK5XC7/GY+lfyaW1nf9Q1Jn8kluj6lztqxZuqPYe3P369/LN9dUFEUZc0o92Cd0//8Zeqm7U+5/T+hDxNoRua70U7OX1v71U9vvrfOAJbGOzs11NTOYZfYbU4aez63+BoS6K9Y=
+   eJztl0kOgzAMRb1j113nkc7t/Q/Yv6lkubHjhKqg4ic9yQLxSQLIYUZEc7iAS7iCa7iBW7iDe3iALTzCEzzDC7zCG7zDB3xSEARBMGYmcAqbgdXW2Mi4ln6cadVWZu2avLHmRcpxmWONWcvka2Ll1NRappzvt5+1vG8fc++yVoEPa93k98VpjHO5TO1a7bsm+nz3Upmp+3bJDIIgGDPenitruafitXd/KGs+Hln3gbdHWL2SUzKX2v7LKe3vtfsBD7n9vMzXenoK6z0pyfkXhvI/m6tfQlwT9w==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="7" height="200">
   <data encoding="base64" compression="zlib">
-   eJzt0bENACAIRFGmZP9RrLUxKgjif50x8TgUAQAAAOrRzTvvt7JkRnSKyr2dGbXb1TzLWfhX+7tTL8x7e8YXdpKBSt9rPEfIMIOn6v1mPPr/ttMGq0wQIQ==
+   eJztlzkOACEMA3kl/38KPRLiEHZsyLQrzQQaNqV4UU2cp16lWZi+VffN7mmHNV/vqwD/ahflVvShnEi3izNJkr9hvp+Ipvv8EX6lLrsZdbe7PYV/a6emw/5woxu177z4zZV+92TuoiMUZkDy+vlmIM7/2502VGUYhw==
   </data>
  </layer>
 </map>
