@@ -59,10 +59,10 @@ public class GamePlayState extends BasicGameState{
     	
     	//create all levels
     	levels = new ArrayList<Level>();
-    	levels.add(new RedLevel("redmap", "GUY"));//, enemies);
-    	levels.add(new Level("testLevel", "GUY"));
+    	levels.add(new Level("levelone", "GUY"));
+    	levels.add(new Level("leveltwo", "GUY"));
     	levels.add(new Level("yellowlevel", "GUY"));
-    	level = levels.get(2);
+    	level = levels.get(0);
     	
     	//init first level
     	level.init();
@@ -99,9 +99,10 @@ public class GamePlayState extends BasicGameState{
     	input = gc.getInput();
     	mainChar = level.getMainChar();
 
+    	//goal reached
     	if(mainChar.getY()+64 < 128){
-    		levels.get(1).init();
-    		level = levels.get(1);
+    		levels.get(levels.indexOf(level)+1).init();
+    		level = levels.get(levels.indexOf(level)+1);
     	}
     	
     	if(input.isKeyPressed(Input.KEY_1)){
