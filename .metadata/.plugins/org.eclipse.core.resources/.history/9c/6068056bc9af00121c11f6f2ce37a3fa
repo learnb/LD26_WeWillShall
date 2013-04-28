@@ -45,7 +45,6 @@ public class Level {
 		mainChar.setY(levelMap.getHeight() * levelMap.getTileHeight() - 64);
 		mainChar.setVelY(-5f);
 		enemyList = new ArrayList<Sprite>();
-		platforms = new ArrayList<CloudPlatform>();
 		if (enemyIDs != null) {
 			for(String id : enemyIDs){
 				enemyList.add(new Sprite(ResourceManager.getImage(id)));
