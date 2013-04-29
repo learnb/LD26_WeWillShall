@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import net.umc.ludumdare.states.GamePlayState;
 import net.umc.ludumdare.tools.ResourceManager;
-import net.umc.ludumdare.tools.StatsHelper;
+//import net.umc.ludumdare.tools.StatsHelper;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
