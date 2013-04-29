@@ -22,7 +22,7 @@ public class StatsState extends BasicGameState{
     private final String KEEP_TRY = "Keep Try", LEVEL = "Level", NUMTRIES = "# of Tries", NUMCOINS = "Coins";
     private final String RED = "1 - Red", ORANGE = "2 - Orange", YELLOW = "3 - Yellow", GREEN = "4 - Green";
     private final String BLUE = "5 - Blue", INDIGO = "6 - Indigo", VIOLET = "7 - Violet", RAINBOW = "8 - Bonus";
-    private final String COINFORMAT = "%s/1", LEVELSELECT = "Press the number key corresponding to the level you wish to enter.";
+    private final String COINFORMAT = "%s/1", LEVELSELECT = "Press the number key corresponding to the level you wish to enter.\nPress F1 to clear stats and restart.";
     public StatsState( int stateID ) 
     {
        this.stateID = stateID;
@@ -95,7 +95,7 @@ public class StatsState extends BasicGameState{
     	}
     	//statFont.drawString(midX + 250, 500, String.format(COINFORMAT, 0));
     	
-    	messageFont.drawString(midX - 220,  screenHeight - 20, LEVELSELECT);
+    	messageFont.drawString(midX - 220,  screenHeight - 40, LEVELSELECT);
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {

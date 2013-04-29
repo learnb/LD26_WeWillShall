@@ -109,13 +109,14 @@ public class GamePlayState extends BasicGameState{
     	
 
     	//goal reached
-    	if((mainChar.getY()+64 < 128) /*|| (input.isKeyPressed(Input.KEY_F))*/){
+    	if((mainChar.getY()+64 < 128) || (input.isKeyPressed(Input.KEY_F))){
     		if(levels.indexOf(level) < 6){
     			levels.get(levels.indexOf(level)+1).init();
     			level = levels.get(levels.indexOf(level)+1);
     		}else{
     			ResourceManager.updateGlobal("win", "true");
-    			sbg.enterState(MainGame.STATSSTATE);
+    			System.out.println("WIN STATE");
+    			sbg.enterState(MainGame.WINSTATE);
     		}
     	}
     	

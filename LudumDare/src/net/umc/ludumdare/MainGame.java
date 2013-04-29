@@ -5,6 +5,7 @@ import net.umc.ludumdare.states.MainMenuState;
 import net.umc.ludumdare.states.OptionsState;
 import net.umc.ludumdare.states.SplashScreenState;
 import net.umc.ludumdare.states.StatsState;
+import net.umc.ludumdare.states.WinScreenState;
 import net.umc.ludumdare.tools.ResourceManager;
 
 import org.newdawn.slick.AppGameContainer;
@@ -19,6 +20,7 @@ public class MainGame extends StateBasedGame {
     public static final int OPTIONS = 2;
     public static final int GAMEPLAYSTATE = 3;
     public static final int STATSSTATE = 4;
+    public static final int WINSTATE = 5;
     
     
     public MainGame()
@@ -44,5 +46,6 @@ public class MainGame extends StateBasedGame {
     	this.addState(new OptionsState(OPTIONS));
     	this.addState(new GamePlayState(GAMEPLAYSTATE));
     	this.addState(new StatsState(STATSSTATE));
+    	this.addState(new WinScreenState(WINSTATE));
     }
 }
