@@ -64,31 +64,31 @@ public class StatsState extends BasicGameState{
     	statFont.drawString(midX + 250, 220, String.format(COINFORMAT, ResourceManager.getGlobalBoolean("level0coin") ? 1 : 0));
     	
     	statFont.drawString(midX - 300, 260, ORANGE);
-    	statFont.drawString(midX, 260, StatsHelper.getTriesByLevelNumber(0) + "");
+    	statFont.drawString(midX, 260, StatsHelper.getTriesByLevelNumber(1) + "");
     	statFont.drawString(midX + 250, 260, String.format(COINFORMAT, ResourceManager.getGlobalBoolean("level1coin") ? 1 : 0));
     	
     	statFont.drawString(midX - 300, 300, YELLOW);
-    	statFont.drawString(midX, 300, StatsHelper.getTriesByLevelNumber(0) + "");
+    	statFont.drawString(midX, 300, StatsHelper.getTriesByLevelNumber(2) + "");
     	statFont.drawString(midX + 250, 300, String.format(COINFORMAT, ResourceManager.getGlobalBoolean("level2coin") ? 1 : 0));
     	
     	statFont.drawString(midX - 300, 340, GREEN);
-    	statFont.drawString(midX, 340, StatsHelper.getTriesByLevelNumber(0) + "");
+    	statFont.drawString(midX, 340, StatsHelper.getTriesByLevelNumber(3) + "");
     	statFont.drawString(midX + 250, 340, String.format(COINFORMAT, ResourceManager.getGlobalBoolean("level3coin") ? 1 : 0));
     	
     	statFont.drawString(midX - 300, 380, BLUE);
-    	statFont.drawString(midX, 380, StatsHelper.getTriesByLevelNumber(0) + "");
+    	statFont.drawString(midX, 380, StatsHelper.getTriesByLevelNumber(4) + "");
     	statFont.drawString(midX + 250, 380, String.format(COINFORMAT, ResourceManager.getGlobalBoolean("level4coin") ? 1 : 0));
     	
     	statFont.drawString(midX - 300, 420, INDIGO);
-    	statFont.drawString(midX, 420, StatsHelper.getTriesByLevelNumber(0) + "");
+    	statFont.drawString(midX, 420, StatsHelper.getTriesByLevelNumber(5) + "");
     	statFont.drawString(midX + 250, 420, String.format(COINFORMAT, ResourceManager.getGlobalBoolean("level5coin") ? 1 : 0));
     	
     	statFont.drawString(midX - 300, 460, VIOLET);
-    	statFont.drawString(midX, 460, StatsHelper.getTriesByLevelNumber(0) + "");
+    	statFont.drawString(midX, 460, StatsHelper.getTriesByLevelNumber(6) + "");
     	statFont.drawString(midX + 250, 460, String.format(COINFORMAT, ResourceManager.getGlobalBoolean("level6coin") ? 1 : 0));
     	
     	statFont.drawString(midX - 300, 500, RAINBOW);
-    	statFont.drawString(midX, 500, StatsHelper.getTriesByLevelNumber(0) + "");
+    	statFont.drawString(midX, 500, StatsHelper.getTriesByLevelNumber(7) + "");
     	if (!allCoins()) {
     		g.setColor(Color.red);
     		g.fillRect(midX - 350, 510, 700, 10);
@@ -103,6 +103,12 @@ public class StatsState extends BasicGameState{
     	
     	if (input.isKeyPressed(Input.KEY_ESCAPE)) {
     		sbg.enterState(MainGame.MAINMENUSTATE);
+    	}
+    	
+    	if(input.isKeyPressed(Input.KEY_F1)){
+    		StatsHelper.clearStats();
+    		GamePlayState.setLevel(0);
+    		sbg.enterState(MainGame.GAMEPLAYSTATE);
     	}
     	
     	if (input.isKeyPressed(Input.KEY_1) || input.isKeyPressed(Input.KEY_NUMPAD1)) {

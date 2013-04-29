@@ -96,13 +96,17 @@ public class GamePlayState extends BasicGameState{
     }
  
     public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
+    	input = gc.getInput();
+    	if(input.isKeyPressed(Input.KEY_ENTER)){
+    		pause = !pause;
+    	}
     	if (pause) return;
     	
     	cloudY = cloudY >= 2048 ? -2048 : cloudY + 2;
     	
     	mainChar = level.getMainChar();
     	level.update(gc, sbg, delta);
-    	input = gc.getInput();
+    	
 
     	//goal reached
     	if((mainChar.getY()+64 < 128) /*|| (input.isKeyPressed(Input.KEY_F))*/){

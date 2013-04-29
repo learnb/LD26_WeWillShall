@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import net.umc.ludumdare.states.GamePlayState;
 import net.umc.ludumdare.tools.ResourceManager;
-//import net.umc.ludumdare.tools.StatsHelper;
+import net.umc.ludumdare.tools.StatsHelper;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -50,7 +50,7 @@ public class Level {
 		enemyList = new ArrayList<Sprite>();
 		platforms = new ArrayList<CloudPlatform>();
 		
-		//StatsHelper.addTryToWorld(levelId);
+		StatsHelper.addTryToWorld(levelId);
 		
 		if (enemyIDs != null) {
 			for(String id : enemyIDs){
