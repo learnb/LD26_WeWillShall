@@ -89,7 +89,7 @@ public class Level {
 		}
 	}
 	
-	public void update(GameContainer gc, StateBasedGame sbg, int delta){
+	public void update(GameContainer gc, StateBasedGame sbg, int delta, GamePlayState myState){
 		mainChar.update(gc, sbg, delta);
 		for(Sprite e : enemyList){
 			if (Math.abs(e.getY() - mainChar.getY()) <= 600) {
@@ -98,7 +98,11 @@ public class Level {
 			else{
 				continue;
 			}		
-			if (!GamePlayState.getFalling() && !GamePlayState.getJumping() && checkHeroCollision(mainChar, e)) init();
+			if (!GamePlayState.getFalling() && !GamePlayState.getJumping() && checkHeroCollision(mainChar, e)){
+				myState.setPause(true);
+				init();
+				myState.setPause(false);
+			}
 		}
 		for(CloudPlatform p: platforms) {
 			p.update(gc, sbg, delta);

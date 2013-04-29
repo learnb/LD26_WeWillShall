@@ -105,14 +105,16 @@ public class GamePlayState extends BasicGameState{
     	cloudY = cloudY >= 2048 ? -2048 : cloudY + 2;
     	
     	mainChar = level.getMainChar();
-    	level.update(gc, sbg, delta);
+    	level.update(gc, sbg, delta, this);
     	
 
     	//goal reached
     	if((mainChar.getY()+64 < 128) || (input.isKeyPressed(Input.KEY_F))){
     		if(levels.indexOf(level) < 6){
+    			pause = true;
     			levels.get(levels.indexOf(level)+1).init();
     			level = levels.get(levels.indexOf(level)+1);
+    			pause = false;
     		}else{
     			ResourceManager.updateGlobal("win", "true");
     			System.out.println("WIN STATE");
@@ -178,8 +180,9 @@ public class GamePlayState extends BasicGameState{
     	int panelY = (int)(mainChar.getY() + 48) / 64;
     	
     	if ((!jumping && !falling) && !level.getPlatform()[panelX][panelY] && !onPlatform()) {
-    		//pause = true;
+    		pause = true;
     		level.init();
+    		pause = false;
     	}
     }
     
@@ -200,4 +203,13 @@ public class GamePlayState extends BasicGameState{
     	mainChar = level.getMainChar();
     	level.init();
     }
+
+	public boolean isPause() {
+		return pause;
+	}
+
+	public void setPause(boolean pause) {
+		this.pause = pause;
+	}
+
 }

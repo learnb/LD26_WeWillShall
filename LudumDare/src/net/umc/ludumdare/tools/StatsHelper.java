@@ -1,6 +1,5 @@
 package net.umc.ludumdare.tools;
 
-import net.umc.ludumdare.common.Constants;
 
 public class StatsHelper {
 
