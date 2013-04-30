@@ -1,27 +1,23 @@
 Project:	Ludum Dare 26 - Jam
 Team:		We Will Shall
-Game Title:	""
+Game Title:	"Patty's Perilous Plunder"
 
-Platform:	Windows and Linux?
+Platform:	Windows, Linux, MacOS
 Language:	Java
 
 Game Description
 -------------------
-	Something awesome will go here later! :D
-
-How to Compile
---------------
-	TODO
+	You can only do two things, move and jump(minimalism). Help Patty collect plunder on this running and jumping perlious adventure!
 
 How to Run
 ----------
-	TODO
+	Execute the 'run' script file correspoding to you platform. (i.e. run.bat on windows)
 
 Controls
 --------
-	TODO
+	Move left/right:	left and right arrow keys
+	Jump:			Space or up arrow key
 
 Known Bugs
 ----------
 	None.
-
