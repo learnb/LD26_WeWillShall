@@ -109,7 +109,7 @@ public class GamePlayState extends BasicGameState{
     	
 
     	//goal reached
-    	if((mainChar.getY()+64 < 128) /*|| (input.isKeyPressed(Input.KEY_F))*/){
+    	if((mainChar.getY()+64 < 128)/* || (input.isKeyPressed(Input.KEY_F))*/){
     		if(levels.indexOf(level) < 6){
     			pause = true;
     			levels.get(levels.indexOf(level)+1).init();

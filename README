@@ -1,23 +1,32 @@
 Project:	Ludum Dare 26 - Jam
 Team:		We Will Shall
-Game Title:	"Patty's Perilous Plunder"
+Game Title:	Patty's Perilous Plunder
 
 Platform:	Windows, Linux, MacOS
 Language:	Java
 
 Game Description
 -------------------
-	You can only do two things, move and jump(minimalism). Help Patty collect plunder on this running and jumping perlious adventure!
+	You can only do two things, move and jump (minimalism). Help Patty collect plunder on this running and jumping perlious adventure! Make sure you see what happens when you collect all of the coins!
 
 How to Run
 ----------
-	Execute the 'run' script file correspoding to you platform. (i.e. run.bat on windows)
+	Execute the 'run' script file correspoding to you platform. 
+	Windows command:	"start run.bat"
+	Linux command:		"sh run.sh" or "./run.sh"
+
+	Trouble Shooting:
+
+	1) Make sure the PATH environment variable includes your Java path. (i.e. Typing in 'java -version' into your command line or terminal should display what java version you have installed.)
+
+	2) If you are using the 64-bit version of Java it may not work (known bug). In this case you can try using 32-bit version of Java instead.
 
 Controls
 --------
 	Move left/right:	left and right arrow keys
 	Jump:			Space or up arrow key
+	Pause:			Enter key
 
 Known Bugs
 ----------
-	None.
+	There have been some platform compatiablity issues. As of 5/2/13 it seems to work on Windows and Linux with Java 6 or 7 32-bit. Reports of not running on 64-bit systems.
